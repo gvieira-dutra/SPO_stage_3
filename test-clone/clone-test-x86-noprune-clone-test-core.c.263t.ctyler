@@ -1,0 +1,2053 @@
+
+;; Function scale_samples (scale_samples.default, funcdef_no=23, decl_uid=3954, cgraph_uid=24, symbol_order=23)
+
+===== Basic block count: 1 =====
+----- Statement count: 1 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 2 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 3 -----
+# DEBUG x => 0
+----- Statement count: 4 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 5 -----
+if (cnt_16(D) > 0)
+===== Basic block count: 2 =====
+===== Basic block count: 3 =====
+----- Statement count: 6 -----
+_6 = volume_18(D) * 32767;
+----- Statement count: 7 -----
+_7 = _6 / 100;
+----- Statement count: 8 -----
+_8 = _7 << 1;
+----- Statement count: 9 -----
+_32 = (unsigned int) cnt_16(D);
+----- Statement count: 10 -----
+_31 = _32 + 4294967295;
+----- Statement count: 11 -----
+if (_31 > 6)
+===== Basic block count: 4 =====
+----- Statement count: 12 -----
+_29 = in_17(D) + 2;
+----- Statement count: 13 -----
+_28 = out_19(D) - _29;
+----- Statement count: 14 -----
+_27 = (sizetype) _28;
+----- Statement count: 15 -----
+if (_27 > 12)
+===== Basic block count: 5 =====
+===== Basic block count: 6 =====
+----- Statement count: 16 -----
+bnd.8_66 = _32 >> 3;
+----- Statement count: 17 -----
+_74 = {_8, _8, _8, _8};
+----- Statement count: 18 -----
+_35 = (sizetype) bnd.8_66;
+----- Statement count: 19 -----
+_94 = _35 * 16;
+===== Basic block count: 7 =====
+----- Statement count: 20 -----
+# DEBUG x => NULL
+----- Statement count: 21 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 22 -----
+# VUSE <.MEM_25>
+vect__4.13_71 = MEM <vector(8) short int> [(int16_t *)in_17(D) + ivtmp.33_50 * 1];
+----- Statement count: 23 -----
+vect__5.14_72 = [vec_unpack_lo_expr] vect__4.13_71;
+----- Statement count: 24 -----
+vect__5.14_73 = [vec_unpack_hi_expr] vect__4.13_71;
+----- Statement count: 25 -----
+vect__9.15_76 = vect__5.14_72 * _74;
+----- Statement count: 26 -----
+vect__9.15_77 = vect__5.14_73 * _74;
+----- Statement count: 27 -----
+vect__10.16_78 = vect__9.15_76 >> 16;
+----- Statement count: 28 -----
+vect__10.16_79 = vect__9.15_77 >> 16;
+----- Statement count: 29 -----
+vect__12.17_80 = VEC_PACK_TRUNC_EXPR <vect__10.16_78, vect__10.16_79>;
+----- Statement count: 30 -----
+# .MEM_83 = VDEF <.MEM_25>
+MEM <vector(8) short int> [(int16_t *)out_19(D) + ivtmp.33_50 * 1] = vect__12.17_80;
+----- Statement count: 31 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 32 -----
+# DEBUG x => NULL
+----- Statement count: 33 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 34 -----
+ivtmp.33_24 = ivtmp.33_50 + 16;
+----- Statement count: 35 -----
+if (ivtmp.33_24 != _94)
+===== Basic block count: 8 =====
+===== Basic block count: 9 =====
+----- Statement count: 36 -----
+_52 = cnt_16(D) & -8;
+----- Statement count: 37 -----
+niters_vector_mult_vf.9_67 = (unsigned int) _52;
+----- Statement count: 38 -----
+if (_32 == niters_vector_mult_vf.9_67)
+===== Basic block count: 10 =====
+----- Statement count: 39 -----
+# DEBUG x => _52
+----- Statement count: 40 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 41 -----
+_2 = (long unsigned int) niters_vector_mult_vf.9_67;
+----- Statement count: 42 -----
+_3 = _2 * 2;
+----- Statement count: 43 -----
+_4 = in_17(D) + _3;
+----- Statement count: 44 -----
+# VUSE <.MEM_83>
+_5 = *_4;
+----- Statement count: 45 -----
+_9 = (int) _5;
+----- Statement count: 46 -----
+_10 = _8 * _9;
+----- Statement count: 47 -----
+_11 = _10 >> 16;
+----- Statement count: 48 -----
+_12 = out_19(D) + _3;
+----- Statement count: 49 -----
+_21 = (short int) _11;
+----- Statement count: 50 -----
+# .MEM_65 = VDEF <.MEM_83>
+*_12 = _21;
+----- Statement count: 51 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 52 -----
+x_75 = _52 + 1;
+----- Statement count: 53 -----
+# DEBUG x => x_75
+----- Statement count: 54 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 55 -----
+if (cnt_16(D) > x_75)
+===== Basic block count: 11 =====
+===== Basic block count: 12 =====
+----- Statement count: 56 -----
+# DEBUG x => x_75
+----- Statement count: 57 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 58 -----
+_33 = _3 + 2;
+----- Statement count: 59 -----
+_34 = in_17(D) + _33;
+----- Statement count: 60 -----
+# VUSE <.MEM_65>
+_86 = *_34;
+----- Statement count: 61 -----
+_87 = (int) _86;
+----- Statement count: 62 -----
+_88 = _8 * _87;
+----- Statement count: 63 -----
+_89 = _88 >> 16;
+----- Statement count: 64 -----
+_90 = out_19(D) + _33;
+----- Statement count: 65 -----
+_91 = (short int) _89;
+----- Statement count: 66 -----
+# .MEM_92 = VDEF <.MEM_65>
+*_90 = _91;
+----- Statement count: 67 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 68 -----
+x_93 = _52 + 2;
+----- Statement count: 69 -----
+# DEBUG x => x_93
+----- Statement count: 70 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 71 -----
+if (cnt_16(D) > x_93)
+===== Basic block count: 13 =====
+===== Basic block count: 14 =====
+----- Statement count: 72 -----
+# DEBUG x => x_93
+----- Statement count: 73 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 74 -----
+_97 = _3 + 4;
+----- Statement count: 75 -----
+_98 = in_17(D) + _97;
+----- Statement count: 76 -----
+# VUSE <.MEM_92>
+_99 = *_98;
+----- Statement count: 77 -----
+_100 = (int) _99;
+----- Statement count: 78 -----
+_101 = _8 * _100;
+----- Statement count: 79 -----
+_102 = _101 >> 16;
+----- Statement count: 80 -----
+_103 = out_19(D) + _97;
+----- Statement count: 81 -----
+_104 = (short int) _102;
+----- Statement count: 82 -----
+# .MEM_105 = VDEF <.MEM_92>
+*_103 = _104;
+----- Statement count: 83 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 84 -----
+x_106 = _52 + 3;
+----- Statement count: 85 -----
+# DEBUG x => x_106
+----- Statement count: 86 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 87 -----
+if (cnt_16(D) > x_106)
+===== Basic block count: 15 =====
+===== Basic block count: 16 =====
+----- Statement count: 88 -----
+# DEBUG x => x_106
+----- Statement count: 89 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 90 -----
+_110 = _3 + 6;
+----- Statement count: 91 -----
+_111 = in_17(D) + _110;
+----- Statement count: 92 -----
+# VUSE <.MEM_105>
+_112 = *_111;
+----- Statement count: 93 -----
+_113 = (int) _112;
+----- Statement count: 94 -----
+_114 = _8 * _113;
+----- Statement count: 95 -----
+_115 = _114 >> 16;
+----- Statement count: 96 -----
+_116 = out_19(D) + _110;
+----- Statement count: 97 -----
+_117 = (short int) _115;
+----- Statement count: 98 -----
+# .MEM_118 = VDEF <.MEM_105>
+*_116 = _117;
+----- Statement count: 99 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 100 -----
+x_119 = _52 + 4;
+----- Statement count: 101 -----
+# DEBUG x => x_119
+----- Statement count: 102 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 103 -----
+if (cnt_16(D) > x_119)
+===== Basic block count: 17 =====
+===== Basic block count: 18 =====
+----- Statement count: 104 -----
+# DEBUG x => x_119
+----- Statement count: 105 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 106 -----
+_123 = _3 + 8;
+----- Statement count: 107 -----
+_124 = in_17(D) + _123;
+----- Statement count: 108 -----
+# VUSE <.MEM_118>
+_125 = *_124;
+----- Statement count: 109 -----
+_126 = (int) _125;
+----- Statement count: 110 -----
+_127 = _8 * _126;
+----- Statement count: 111 -----
+_128 = _127 >> 16;
+----- Statement count: 112 -----
+_129 = out_19(D) + _123;
+----- Statement count: 113 -----
+_130 = (short int) _128;
+----- Statement count: 114 -----
+# .MEM_131 = VDEF <.MEM_118>
+*_129 = _130;
+----- Statement count: 115 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 116 -----
+x_132 = _52 + 5;
+----- Statement count: 117 -----
+# DEBUG x => x_132
+----- Statement count: 118 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 119 -----
+if (cnt_16(D) > x_132)
+===== Basic block count: 19 =====
+===== Basic block count: 20 =====
+----- Statement count: 120 -----
+# DEBUG x => x_132
+----- Statement count: 121 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 122 -----
+_136 = _3 + 10;
+----- Statement count: 123 -----
+_137 = in_17(D) + _136;
+----- Statement count: 124 -----
+# VUSE <.MEM_131>
+_138 = *_137;
+----- Statement count: 125 -----
+_139 = (int) _138;
+----- Statement count: 126 -----
+_140 = _8 * _139;
+----- Statement count: 127 -----
+_141 = _140 >> 16;
+----- Statement count: 128 -----
+_142 = out_19(D) + _136;
+----- Statement count: 129 -----
+_143 = (short int) _141;
+----- Statement count: 130 -----
+# .MEM_144 = VDEF <.MEM_131>
+*_142 = _143;
+----- Statement count: 131 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 132 -----
+x_145 = _52 + 6;
+----- Statement count: 133 -----
+# DEBUG x => x_145
+----- Statement count: 134 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 135 -----
+if (cnt_16(D) > x_145)
+===== Basic block count: 21 =====
+===== Basic block count: 22 =====
+----- Statement count: 136 -----
+# DEBUG x => x_145
+----- Statement count: 137 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 138 -----
+_54 = _3 + 12;
+----- Statement count: 139 -----
+_55 = in_17(D) + _54;
+----- Statement count: 140 -----
+# VUSE <.MEM_144>
+_56 = *_55;
+----- Statement count: 141 -----
+_57 = (int) _56;
+----- Statement count: 142 -----
+_58 = _8 * _57;
+----- Statement count: 143 -----
+_59 = _58 >> 16;
+----- Statement count: 144 -----
+_60 = out_19(D) + _54;
+----- Statement count: 145 -----
+_61 = (short int) _59;
+----- Statement count: 146 -----
+# .MEM_62 = VDEF <.MEM_144>
+*_60 = _61;
+----- Statement count: 147 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 148 -----
+# DEBUG x => _52 + 7
+----- Statement count: 149 -----
+# DEBUG BEGIN_STMT
+===== Basic block count: 23 =====
+===== Basic block count: 24 =====
+----- Statement count: 150 -----
+_146 = (sizetype) cnt_16(D);
+----- Statement count: 151 -----
+_22 = _146 * 2;
+===== Basic block count: 25 =====
+----- Statement count: 152 -----
+# DEBUG x => (int) (ivtmp.28_23 /[ex] 2)
+----- Statement count: 153 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 154 -----
+# VUSE <.MEM_13>
+_41 = MEM[(int16_t *)in_17(D) + ivtmp.28_23 * 1];
+----- Statement count: 155 -----
+_42 = (int) _41;
+----- Statement count: 156 -----
+_43 = _8 * _42;
+----- Statement count: 157 -----
+_44 = _43 >> 16;
+----- Statement count: 158 -----
+_46 = (short int) _44;
+----- Statement count: 159 -----
+# .MEM_47 = VDEF <.MEM_13>
+MEM[(int16_t *)out_19(D) + ivtmp.28_23 * 1] = _46;
+----- Statement count: 160 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 161 -----
+# DEBUG x => (int) (ivtmp.28_23 /[ex] 2) + 1
+----- Statement count: 162 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 163 -----
+ivtmp.28_63 = ivtmp.28_23 + 2;
+----- Statement count: 164 -----
+if (_22 != ivtmp.28_63)
+===== Basic block count: 26 =====
+===== Basic block count: 27 =====
+===== Basic block count: 28 =====
+===== Basic block count: 29 =====
+===== Basic block count: 30 =====
+===== Basic block count: 31 =====
+----- Statement count: 165 -----
+# VUSE <.MEM_37>
+return;
+__attribute__((target ("default"), target_clones ("default", "arch=x86-64-v3")))
+void scale_samples (int16_t * in, int16_t * out, int cnt, int volume)
+{
+  sizetype ivtmp.33;
+  sizetype ivtmp.28;
+  vector(8) short int vect__12.17;
+  vector(4) int vect__10.16;
+  vector(4) int vect__9.15;
+  vector(4) int vect__5.14;
+  vector(8) short int vect__4.13;
+  int tmp.10;
+  unsigned int niters_vector_mult_vf.9;
+  unsigned int bnd.8;
+  int x;
+  long unsigned int _2;
+  long unsigned int _3;
+  int16_t * _4;
+  short int _5;
+  int _6;
+  int _7;
+  int _8;
+  int _9;
+  int _10;
+  int _11;
+  int16_t * _12;
+  short int _21;
+  sizetype _22;
+  sizetype _27;
+  ssizetype _28;
+  int16_t * _29;
+  unsigned int _31;
+  unsigned int _32;
+  long unsigned int _33;
+  int16_t * _34;
+  sizetype _35;
+  short int _41;
+  int _42;
+  int _43;
+  int _44;
+  short int _46;
+  int _52;
+  long unsigned int _54;
+  int16_t * _55;
+  short int _56;
+  int _57;
+  int _58;
+  int _59;
+  int16_t * _60;
+  short int _61;
+  vector(4) int _74;
+  short int _86;
+  int _87;
+  int _88;
+  int _89;
+  int16_t * _90;
+  short int _91;
+  sizetype _94;
+  long unsigned int _97;
+  int16_t * _98;
+  short int _99;
+  int _100;
+  int _101;
+  int _102;
+  int16_t * _103;
+  short int _104;
+  long unsigned int _110;
+  int16_t * _111;
+  short int _112;
+  int _113;
+  int _114;
+  int _115;
+  int16_t * _116;
+  short int _117;
+  long unsigned int _123;
+  int16_t * _124;
+  short int _125;
+  int _126;
+  int _127;
+  int _128;
+  int16_t * _129;
+  short int _130;
+  long unsigned int _136;
+  int16_t * _137;
+  short int _138;
+  int _139;
+  int _140;
+  int _141;
+  int16_t * _142;
+  short int _143;
+  sizetype _146;
+
+  <bb 2> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG x => 0
+  # DEBUG BEGIN_STMT
+  if (cnt_16(D) > 0)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 20>; [11.00%]
+
+  <bb 20> [local count: 12992276]:
+  goto <bb 19>; [100.00%]
+
+  <bb 3> [local count: 105119324]:
+  _6 = volume_18(D) * 32767;
+  _7 = _6 / 100;
+  _8 = _7 << 1;
+  _32 = (unsigned int) cnt_16(D);
+  _31 = _32 + 4294967295;
+  if (_31 > 6)
+    goto <bb 4>; [89.44%]
+  else
+    goto <bb 21>; [10.56%]
+
+  <bb 4> [local count: 94021582]:
+  _29 = in_17(D) + 2;
+  _28 = out_19(D) - _29;
+  _27 = (sizetype) _28;
+  if (_27 > 12)
+    goto <bb 5>; [89.44%]
+  else
+    goto <bb 22>; [10.56%]
+
+  <bb 22> [local count: 9926122]:
+  goto <bb 15>; [100.00%]
+
+  <bb 5> [local count: 84095460]:
+  bnd.8_66 = _32 >> 3;
+  _74 = {_8, _8, _8, _8};
+  _35 = (sizetype) bnd.8_66;
+  _94 = _35 * 16;
+
+  <bb 6> [local count: 764504183]:
+  # ivtmp.33_50 = PHI <ivtmp.33_24(23), 0(5)>
+  # DEBUG x => NULL
+  # DEBUG BEGIN_STMT
+  vect__4.13_71 = MEM <vector(8) short int> [(int16_t *)in_17(D) + ivtmp.33_50 * 1];
+  vect__5.14_72 = [vec_unpack_lo_expr] vect__4.13_71;
+  vect__5.14_73 = [vec_unpack_hi_expr] vect__4.13_71;
+  vect__9.15_76 = vect__5.14_72 * _74;
+  vect__9.15_77 = vect__5.14_73 * _74;
+  vect__10.16_78 = vect__9.15_76 >> 16;
+  vect__10.16_79 = vect__9.15_77 >> 16;
+  vect__12.17_80 = VEC_PACK_TRUNC_EXPR <vect__10.16_78, vect__10.16_79>;
+  MEM <vector(8) short int> [(int16_t *)out_19(D) + ivtmp.33_50 * 1] = vect__12.17_80;
+  # DEBUG BEGIN_STMT
+  # DEBUG x => NULL
+  # DEBUG BEGIN_STMT
+  ivtmp.33_24 = ivtmp.33_50 + 16;
+  if (ivtmp.33_24 != _94)
+    goto <bb 23>; [89.00%]
+  else
+    goto <bb 7>; [11.00%]
+
+  <bb 23> [local count: 680408723]:
+  goto <bb 6>; [100.00%]
+
+  <bb 7> [local count: 84095460]:
+  _52 = cnt_16(D) & -8;
+  niters_vector_mult_vf.9_67 = (unsigned int) _52;
+  if (_32 == niters_vector_mult_vf.9_67)
+    goto <bb 24>; [12.50%]
+  else
+    goto <bb 8>; [87.50%]
+
+  <bb 8> [local count: 73583527]:
+  # DEBUG x => _52
+  # DEBUG BEGIN_STMT
+  _2 = (long unsigned int) niters_vector_mult_vf.9_67;
+  _3 = _2 * 2;
+  _4 = in_17(D) + _3;
+  _5 = *_4;
+  _9 = (int) _5;
+  _10 = _8 * _9;
+  _11 = _10 >> 16;
+  _12 = out_19(D) + _3;
+  _21 = (short int) _11;
+  *_12 = _21;
+  # DEBUG BEGIN_STMT
+  x_75 = _52 + 1;
+  # DEBUG x => x_75
+  # DEBUG BEGIN_STMT
+  if (cnt_16(D) > x_75)
+    goto <bb 9>; [85.71%]
+  else
+    goto <bb 25>; [14.29%]
+
+  <bb 25> [local count: 10511932]:
+  goto <bb 17>; [100.00%]
+
+  <bb 9> [local count: 63071596]:
+  # DEBUG x => x_75
+  # DEBUG BEGIN_STMT
+  _33 = _3 + 2;
+  _34 = in_17(D) + _33;
+  _86 = *_34;
+  _87 = (int) _86;
+  _88 = _8 * _87;
+  _89 = _88 >> 16;
+  _90 = out_19(D) + _33;
+  _91 = (short int) _89;
+  *_90 = _91;
+  # DEBUG BEGIN_STMT
+  x_93 = _52 + 2;
+  # DEBUG x => x_93
+  # DEBUG BEGIN_STMT
+  if (cnt_16(D) > x_93)
+    goto <bb 10>; [85.71%]
+  else
+    goto <bb 26>; [14.29%]
+
+  <bb 26> [local count: 9010228]:
+  goto <bb 17>; [100.00%]
+
+  <bb 10> [local count: 54061368]:
+  # DEBUG x => x_93
+  # DEBUG BEGIN_STMT
+  _97 = _3 + 4;
+  _98 = in_17(D) + _97;
+  _99 = *_98;
+  _100 = (int) _99;
+  _101 = _8 * _100;
+  _102 = _101 >> 16;
+  _103 = out_19(D) + _97;
+  _104 = (short int) _102;
+  *_103 = _104;
+  # DEBUG BEGIN_STMT
+  x_106 = _52 + 3;
+  # DEBUG x => x_106
+  # DEBUG BEGIN_STMT
+  if (cnt_16(D) > x_106)
+    goto <bb 11>; [85.71%]
+  else
+    goto <bb 27>; [14.29%]
+
+  <bb 27> [local count: 7723053]:
+  goto <bb 17>; [100.00%]
+
+  <bb 11> [local count: 46338317]:
+  # DEBUG x => x_106
+  # DEBUG BEGIN_STMT
+  _110 = _3 + 6;
+  _111 = in_17(D) + _110;
+  _112 = *_111;
+  _113 = (int) _112;
+  _114 = _8 * _113;
+  _115 = _114 >> 16;
+  _116 = out_19(D) + _110;
+  _117 = (short int) _115;
+  *_116 = _117;
+  # DEBUG BEGIN_STMT
+  x_119 = _52 + 4;
+  # DEBUG x => x_119
+  # DEBUG BEGIN_STMT
+  if (cnt_16(D) > x_119)
+    goto <bb 12>; [85.71%]
+  else
+    goto <bb 28>; [14.29%]
+
+  <bb 28> [local count: 6619760]:
+  goto <bb 17>; [100.00%]
+
+  <bb 12> [local count: 39718557]:
+  # DEBUG x => x_119
+  # DEBUG BEGIN_STMT
+  _123 = _3 + 8;
+  _124 = in_17(D) + _123;
+  _125 = *_124;
+  _126 = (int) _125;
+  _127 = _8 * _126;
+  _128 = _127 >> 16;
+  _129 = out_19(D) + _123;
+  _130 = (short int) _128;
+  *_129 = _130;
+  # DEBUG BEGIN_STMT
+  x_132 = _52 + 5;
+  # DEBUG x => x_132
+  # DEBUG BEGIN_STMT
+  if (cnt_16(D) > x_132)
+    goto <bb 13>; [85.71%]
+  else
+    goto <bb 29>; [14.29%]
+
+  <bb 29> [local count: 5674080]:
+  goto <bb 17>; [100.00%]
+
+  <bb 13> [local count: 34044478]:
+  # DEBUG x => x_132
+  # DEBUG BEGIN_STMT
+  _136 = _3 + 10;
+  _137 = in_17(D) + _136;
+  _138 = *_137;
+  _139 = (int) _138;
+  _140 = _8 * _139;
+  _141 = _140 >> 16;
+  _142 = out_19(D) + _136;
+  _143 = (short int) _141;
+  *_142 = _143;
+  # DEBUG BEGIN_STMT
+  x_145 = _52 + 6;
+  # DEBUG x => x_145
+  # DEBUG BEGIN_STMT
+  if (cnt_16(D) > x_145)
+    goto <bb 14>; [85.71%]
+  else
+    goto <bb 30>; [14.29%]
+
+  <bb 30> [local count: 4863497]:
+  goto <bb 17>; [100.00%]
+
+  <bb 14> [local count: 29180978]:
+  # DEBUG x => x_145
+  # DEBUG BEGIN_STMT
+  _54 = _3 + 12;
+  _55 = in_17(D) + _54;
+  _56 = *_55;
+  _57 = (int) _56;
+  _58 = _8 * _57;
+  _59 = _58 >> 16;
+  _60 = out_19(D) + _54;
+  _61 = (short int) _59;
+  *_60 = _61;
+  # DEBUG BEGIN_STMT
+  # DEBUG x => _52 + 7
+  # DEBUG BEGIN_STMT
+  goto <bb 17>; [100.00%]
+
+  <bb 21> [local count: 11097742]:
+
+  <bb 15> [local count: 21023864]:
+  _146 = (sizetype) cnt_16(D);
+  _22 = _146 * 2;
+
+  <bb 16> [local count: 191126041]:
+  # ivtmp.28_23 = PHI <0(15), ivtmp.28_63(31)>
+  # DEBUG x => (int) (ivtmp.28_23 /[ex] 2)
+  # DEBUG BEGIN_STMT
+  _41 = MEM[(int16_t *)in_17(D) + ivtmp.28_23 * 1];
+  _42 = (int) _41;
+  _43 = _8 * _42;
+  _44 = _43 >> 16;
+  _46 = (short int) _44;
+  MEM[(int16_t *)out_19(D) + ivtmp.28_23 * 1] = _46;
+  # DEBUG BEGIN_STMT
+  # DEBUG x => (int) (ivtmp.28_23 /[ex] 2) + 1
+  # DEBUG BEGIN_STMT
+  ivtmp.28_63 = ivtmp.28_23 + 2;
+  if (_22 != ivtmp.28_63)
+    goto <bb 31>; [89.00%]
+  else
+    goto <bb 32>; [11.00%]
+
+  <bb 32> [local count: 21023864]:
+  goto <bb 18>; [100.00%]
+
+  <bb 31> [local count: 170102177]:
+  goto <bb 16>; [100.00%]
+
+  <bb 24> [local count: 10511933]:
+
+  <bb 17> [local count: 84095460]:
+
+  <bb 18> [local count: 105119324]:
+
+  <bb 19> [local count: 118111600]:
+  return;
+
+}
+
+
+
+;; Function scale_samples.arch_x86_64_v3 (scale_samples.arch_x86_64_v3, funcdef_no=25, decl_uid=3985, cgraph_uid=30, symbol_order=29)
+
+===== Basic block count: 1 =====
+----- Statement count: 1 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 2 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 3 -----
+# DEBUG x => 0
+----- Statement count: 4 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 5 -----
+if (cnt_18(D) > 0)
+===== Basic block count: 2 =====
+===== Basic block count: 3 =====
+----- Statement count: 6 -----
+_9 = volume_8(D) * 32767;
+----- Statement count: 7 -----
+_10 = _9 / 100;
+----- Statement count: 8 -----
+_11 = _10 << 1;
+----- Statement count: 9 -----
+_30 = (unsigned int) cnt_18(D);
+----- Statement count: 10 -----
+_29 = _30 + 4294967295;
+----- Statement count: 11 -----
+if (_29 > 6)
+===== Basic block count: 4 =====
+----- Statement count: 12 -----
+_27 = in_4(D) + 2;
+----- Statement count: 13 -----
+_23 = out_14(D) - _27;
+----- Statement count: 14 -----
+_22 = (sizetype) _23;
+----- Statement count: 15 -----
+if (_22 > 28)
+===== Basic block count: 5 =====
+===== Basic block count: 6 =====
+----- Statement count: 16 -----
+if (_29 <= 14)
+===== Basic block count: 7 =====
+===== Basic block count: 8 =====
+----- Statement count: 17 -----
+bnd.43_72 = _30 >> 4;
+----- Statement count: 18 -----
+_82 = {_11, _11, _11, _11, _11, _11, _11, _11};
+----- Statement count: 19 -----
+_195 = (sizetype) bnd.43_72;
+----- Statement count: 20 -----
+_194 = _195 * 32;
+===== Basic block count: 9 =====
+----- Statement count: 21 -----
+# DEBUG x => NULL
+----- Statement count: 22 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 23 -----
+# VUSE <.MEM_25>
+vect__6.48_79 = MEM <vector(16) short int> [(int16_t *)in_4(D) + ivtmp.81_197 * 1];
+----- Statement count: 24 -----
+vect__7.49_80 = [vec_unpack_lo_expr] vect__6.48_79;
+----- Statement count: 25 -----
+vect__7.49_81 = [vec_unpack_hi_expr] vect__6.48_79;
+----- Statement count: 26 -----
+vect__12.50_84 = vect__7.49_80 * _82;
+----- Statement count: 27 -----
+vect__12.50_85 = vect__7.49_81 * _82;
+----- Statement count: 28 -----
+vect__13.51_86 = vect__12.50_84 >> 16;
+----- Statement count: 29 -----
+vect__13.51_87 = vect__12.50_85 >> 16;
+----- Statement count: 30 -----
+vect__16.52_88 = VEC_PACK_TRUNC_EXPR <vect__13.51_86, vect__13.51_87>;
+----- Statement count: 31 -----
+# .MEM_91 = VDEF <.MEM_25>
+MEM <vector(16) short int> [(int16_t *)out_14(D) + ivtmp.81_197 * 1] = vect__16.52_88;
+----- Statement count: 32 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 33 -----
+# DEBUG x => NULL
+----- Statement count: 34 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 35 -----
+ivtmp.81_196 = ivtmp.81_197 + 32;
+----- Statement count: 36 -----
+if (_194 != ivtmp.81_196)
+===== Basic block count: 10 =====
+===== Basic block count: 11 =====
+----- Statement count: 37 -----
+_162 = cnt_18(D) & -16;
+----- Statement count: 38 -----
+niters_vector_mult_vf.44_73 = (unsigned int) _162;
+----- Statement count: 39 -----
+if (_30 == niters_vector_mult_vf.44_73)
+===== Basic block count: 12 =====
+===== Basic block count: 13 =====
+----- Statement count: 40 -----
+niters.55_95 = _30 - niters_vector_mult_vf.44_73;
+----- Statement count: 41 -----
+_114 = niters.55_95 + 4294967295;
+----- Statement count: 42 -----
+if (_114 <= 6)
+===== Basic block count: 14 =====
+===== Basic block count: 15 =====
+===== Basic block count: 16 =====
+----- Statement count: 43 -----
+_122 = (sizetype) _38;
+----- Statement count: 44 -----
+_123 = _122 * 2;
+----- Statement count: 45 -----
+vectp_in.60_121 = in_4(D) + _123;
+----- Statement count: 46 -----
+_129 = {_11, _11, _11, _11};
+----- Statement count: 47 -----
+vectp_out.67_136 = out_14(D) + _123;
+----- Statement count: 48 -----
+# DEBUG x => NULL
+----- Statement count: 49 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 50 -----
+# VUSE <.MEM_66>
+vect__58.61_126 = MEM <vector(8) short int> [(int16_t *)vectp_in.60_121];
+----- Statement count: 51 -----
+vect__59.62_127 = [vec_unpack_lo_expr] vect__58.61_126;
+----- Statement count: 52 -----
+vect__59.62_128 = [vec_unpack_hi_expr] vect__58.61_126;
+----- Statement count: 53 -----
+vect__60.63_131 = vect__59.62_127 * _129;
+----- Statement count: 54 -----
+vect__60.63_132 = vect__59.62_128 * _129;
+----- Statement count: 55 -----
+vect__61.64_133 = vect__60.63_131 >> 16;
+----- Statement count: 56 -----
+vect__61.64_134 = vect__60.63_132 >> 16;
+----- Statement count: 57 -----
+vect__63.65_135 = VEC_PACK_TRUNC_EXPR <vect__61.64_133, vect__61.64_134>;
+----- Statement count: 58 -----
+# .MEM_141 = VDEF <.MEM_66>
+MEM <vector(8) short int> [(int16_t *)vectp_out.67_136] = vect__63.65_135;
+----- Statement count: 59 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 60 -----
+# DEBUG x => NULL
+----- Statement count: 61 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 62 -----
+_98 = niters.55_40 & 7;
+----- Statement count: 63 -----
+if (_98 == 0)
+===== Basic block count: 17 =====
+----- Statement count: 64 -----
+niters_vector_mult_vf.57_118 = niters.55_40 & 4294967288;
+----- Statement count: 65 -----
+_120 = (int) niters_vector_mult_vf.57_118;
+----- Statement count: 66 -----
+tmp.58_119 = x_32 + _120;
+===== Basic block count: 18 =====
+----- Statement count: 67 -----
+# DEBUG x => x_115
+----- Statement count: 68 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 69 -----
+_3 = (long unsigned int) x_115;
+----- Statement count: 70 -----
+_5 = _3 * 2;
+----- Statement count: 71 -----
+_6 = in_4(D) + _5;
+----- Statement count: 72 -----
+# VUSE <.MEM_116>
+_7 = *_6;
+----- Statement count: 73 -----
+_12 = (int) _7;
+----- Statement count: 74 -----
+_13 = _11 * _12;
+----- Statement count: 75 -----
+_15 = _13 >> 16;
+----- Statement count: 76 -----
+_16 = out_14(D) + _5;
+----- Statement count: 77 -----
+_17 = (short int) _15;
+----- Statement count: 78 -----
+# .MEM_53 = VDEF <.MEM_116>
+*_16 = _17;
+----- Statement count: 79 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 80 -----
+x_55 = x_115 + 1;
+----- Statement count: 81 -----
+# DEBUG x => x_55
+----- Statement count: 82 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 83 -----
+if (cnt_18(D) > x_55)
+===== Basic block count: 19 =====
+===== Basic block count: 20 =====
+----- Statement count: 84 -----
+# DEBUG x => x_55
+----- Statement count: 85 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 86 -----
+_59 = _5 + 2;
+----- Statement count: 87 -----
+_60 = in_4(D) + _59;
+----- Statement count: 88 -----
+# VUSE <.MEM_53>
+_61 = *_60;
+----- Statement count: 89 -----
+_62 = (int) _61;
+----- Statement count: 90 -----
+_63 = _11 * _62;
+----- Statement count: 91 -----
+_65 = _63 >> 16;
+----- Statement count: 92 -----
+_67 = out_14(D) + _59;
+----- Statement count: 93 -----
+_111 = (short int) _65;
+----- Statement count: 94 -----
+# .MEM_130 = VDEF <.MEM_53>
+*_67 = _111;
+----- Statement count: 95 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 96 -----
+x_137 = x_115 + 2;
+----- Statement count: 97 -----
+# DEBUG x => x_137
+----- Statement count: 98 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 99 -----
+if (cnt_18(D) > x_137)
+===== Basic block count: 21 =====
+===== Basic block count: 22 =====
+----- Statement count: 100 -----
+# DEBUG x => x_137
+----- Statement count: 101 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 102 -----
+_83 = _5 + 4;
+----- Statement count: 103 -----
+_35 = in_4(D) + _83;
+----- Statement count: 104 -----
+# VUSE <.MEM_130>
+_36 = *_35;
+----- Statement count: 105 -----
+_64 = (int) _36;
+----- Statement count: 106 -----
+_21 = _11 * _64;
+----- Statement count: 107 -----
+_33 = _21 >> 16;
+----- Statement count: 108 -----
+_34 = out_14(D) + _83;
+----- Statement count: 109 -----
+_144 = (short int) _33;
+----- Statement count: 110 -----
+# .MEM_145 = VDEF <.MEM_130>
+*_34 = _144;
+----- Statement count: 111 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 112 -----
+x_146 = x_115 + 3;
+----- Statement count: 113 -----
+# DEBUG x => x_146
+----- Statement count: 114 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 115 -----
+if (cnt_18(D) > x_146)
+===== Basic block count: 23 =====
+===== Basic block count: 24 =====
+----- Statement count: 116 -----
+# DEBUG x => x_146
+----- Statement count: 117 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 118 -----
+_150 = _5 + 6;
+----- Statement count: 119 -----
+_151 = in_4(D) + _150;
+----- Statement count: 120 -----
+# VUSE <.MEM_145>
+_152 = *_151;
+----- Statement count: 121 -----
+_153 = (int) _152;
+----- Statement count: 122 -----
+_154 = _11 * _153;
+----- Statement count: 123 -----
+_155 = _154 >> 16;
+----- Statement count: 124 -----
+_156 = out_14(D) + _150;
+----- Statement count: 125 -----
+_157 = (short int) _155;
+----- Statement count: 126 -----
+# .MEM_158 = VDEF <.MEM_145>
+*_156 = _157;
+----- Statement count: 127 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 128 -----
+x_159 = x_115 + 4;
+----- Statement count: 129 -----
+# DEBUG x => x_159
+----- Statement count: 130 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 131 -----
+if (cnt_18(D) > x_159)
+===== Basic block count: 25 =====
+===== Basic block count: 26 =====
+----- Statement count: 132 -----
+# DEBUG x => x_159
+----- Statement count: 133 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 134 -----
+_163 = _5 + 8;
+----- Statement count: 135 -----
+_164 = in_4(D) + _163;
+----- Statement count: 136 -----
+# VUSE <.MEM_158>
+_165 = *_164;
+----- Statement count: 137 -----
+_166 = (int) _165;
+----- Statement count: 138 -----
+_167 = _11 * _166;
+----- Statement count: 139 -----
+_168 = _167 >> 16;
+----- Statement count: 140 -----
+_169 = out_14(D) + _163;
+----- Statement count: 141 -----
+_170 = (short int) _168;
+----- Statement count: 142 -----
+# .MEM_171 = VDEF <.MEM_158>
+*_169 = _170;
+----- Statement count: 143 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 144 -----
+x_172 = x_115 + 5;
+----- Statement count: 145 -----
+# DEBUG x => x_172
+----- Statement count: 146 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 147 -----
+if (cnt_18(D) > x_172)
+===== Basic block count: 27 =====
+===== Basic block count: 28 =====
+----- Statement count: 148 -----
+# DEBUG x => x_172
+----- Statement count: 149 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 150 -----
+_176 = _5 + 10;
+----- Statement count: 151 -----
+_177 = in_4(D) + _176;
+----- Statement count: 152 -----
+# VUSE <.MEM_171>
+_178 = *_177;
+----- Statement count: 153 -----
+_179 = (int) _178;
+----- Statement count: 154 -----
+_180 = _11 * _179;
+----- Statement count: 155 -----
+_181 = _180 >> 16;
+----- Statement count: 156 -----
+_182 = out_14(D) + _176;
+----- Statement count: 157 -----
+_183 = (short int) _181;
+----- Statement count: 158 -----
+# .MEM_184 = VDEF <.MEM_171>
+*_182 = _183;
+----- Statement count: 159 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 160 -----
+x_185 = x_115 + 6;
+----- Statement count: 161 -----
+# DEBUG x => x_185
+----- Statement count: 162 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 163 -----
+if (cnt_18(D) > x_185)
+===== Basic block count: 29 =====
+===== Basic block count: 30 =====
+----- Statement count: 164 -----
+# DEBUG x => x_185
+----- Statement count: 165 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 166 -----
+_100 = _5 + 12;
+----- Statement count: 167 -----
+_101 = in_4(D) + _100;
+----- Statement count: 168 -----
+# VUSE <.MEM_184>
+_102 = *_101;
+----- Statement count: 169 -----
+_103 = (int) _102;
+----- Statement count: 170 -----
+_104 = _11 * _103;
+----- Statement count: 171 -----
+_105 = _104 >> 16;
+----- Statement count: 172 -----
+_106 = out_14(D) + _100;
+----- Statement count: 173 -----
+_107 = (short int) _105;
+----- Statement count: 174 -----
+# .MEM_108 = VDEF <.MEM_184>
+*_106 = _107;
+----- Statement count: 175 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 176 -----
+# DEBUG x => x_115 + 7
+----- Statement count: 177 -----
+# DEBUG BEGIN_STMT
+===== Basic block count: 31 =====
+===== Basic block count: 32 =====
+----- Statement count: 178 -----
+_199 = (sizetype) cnt_18(D);
+----- Statement count: 179 -----
+_198 = _199 * 2;
+===== Basic block count: 33 =====
+----- Statement count: 180 -----
+# DEBUG x => (int) (ivtmp.77_201 /[ex] 2)
+----- Statement count: 181 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 182 -----
+# VUSE <.MEM_39>
+_43 = MEM[(int16_t *)in_4(D) + ivtmp.77_201 * 1];
+----- Statement count: 183 -----
+_44 = (int) _43;
+----- Statement count: 184 -----
+_45 = _11 * _44;
+----- Statement count: 185 -----
+_46 = _45 >> 16;
+----- Statement count: 186 -----
+_48 = (short int) _46;
+----- Statement count: 187 -----
+# .MEM_49 = VDEF <.MEM_39>
+MEM[(int16_t *)out_14(D) + ivtmp.77_201 * 1] = _48;
+----- Statement count: 188 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 189 -----
+# DEBUG x => (int) (ivtmp.77_201 /[ex] 2) + 1
+----- Statement count: 190 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 191 -----
+ivtmp.77_200 = ivtmp.77_201 + 2;
+----- Statement count: 192 -----
+if (_198 != ivtmp.77_200)
+===== Basic block count: 34 =====
+===== Basic block count: 35 =====
+===== Basic block count: 36 =====
+===== Basic block count: 37 =====
+===== Basic block count: 38 =====
+===== Basic block count: 39 =====
+===== Basic block count: 40 =====
+----- Statement count: 193 -----
+# VUSE <.MEM_37>
+return;
+__attribute__((target ("arch=x86-64-v3"), target_clones ("default", "arch=x86-64-v3")))
+void scale_samples.arch_x86_64_v3 (int16_t * in, int16_t * out, int cnt, int volume)
+{
+  sizetype ivtmp.81;
+  sizetype ivtmp.77;
+  int16_t * vectp_out.67;
+  vector(8) short int vect__63.65;
+  vector(4) int vect__61.64;
+  vector(4) int vect__60.63;
+  vector(4) int vect__59.62;
+  vector(8) short int vect__58.61;
+  int16_t * vectp_in.60;
+  int tmp.58;
+  unsigned int niters_vector_mult_vf.57;
+  unsigned int niters.55;
+  vector(16) short int vect__16.52;
+  vector(8) int vect__13.51;
+  vector(8) int vect__12.50;
+  vector(8) int vect__7.49;
+  vector(16) short int vect__6.48;
+  int tmp.45;
+  unsigned int niters_vector_mult_vf.44;
+  unsigned int bnd.43;
+  int x;
+  long unsigned int _3;
+  long unsigned int _5;
+  int16_t * _6;
+  short int _7;
+  int _9;
+  int _10;
+  int _11;
+  int _12;
+  int _13;
+  int _15;
+  int16_t * _16;
+  short int _17;
+  int _21;
+  sizetype _22;
+  ssizetype _23;
+  int16_t * _27;
+  unsigned int _29;
+  unsigned int _30;
+  int _33;
+  int16_t * _34;
+  int16_t * _35;
+  short int _36;
+  unsigned int _38;
+  short int _43;
+  int _44;
+  int _45;
+  int _46;
+  short int _48;
+  long unsigned int _59;
+  int16_t * _60;
+  short int _61;
+  int _62;
+  int _63;
+  int _64;
+  int _65;
+  int16_t * _67;
+  vector(8) int _82;
+  long unsigned int _83;
+  unsigned int _98;
+  long unsigned int _100;
+  int16_t * _101;
+  short int _102;
+  int _103;
+  int _104;
+  int _105;
+  int16_t * _106;
+  short int _107;
+  short int _111;
+  unsigned int _114;
+  int _120;
+  sizetype _122;
+  sizetype _123;
+  vector(4) int _129;
+  short int _144;
+  long unsigned int _150;
+  int16_t * _151;
+  short int _152;
+  int _153;
+  int _154;
+  int _155;
+  int16_t * _156;
+  short int _157;
+  int _162;
+  long unsigned int _163;
+  int16_t * _164;
+  short int _165;
+  int _166;
+  int _167;
+  int _168;
+  int16_t * _169;
+  short int _170;
+  long unsigned int _176;
+  int16_t * _177;
+  short int _178;
+  int _179;
+  int _180;
+  int _181;
+  int16_t * _182;
+  short int _183;
+  sizetype _194;
+  sizetype _195;
+  sizetype _198;
+  sizetype _199;
+
+  <bb 2> [local count: 118111600]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG x => 0
+  # DEBUG BEGIN_STMT
+  if (cnt_18(D) > 0)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 25>; [11.00%]
+
+  <bb 25> [local count: 12992276]:
+  goto <bb 24>; [100.00%]
+
+  <bb 3> [local count: 105119324]:
+  _9 = volume_8(D) * 32767;
+  _10 = _9 / 100;
+  _11 = _10 << 1;
+  _30 = (unsigned int) cnt_18(D);
+  _29 = _30 + 4294967295;
+  if (_29 > 6)
+    goto <bb 4>; [89.44%]
+  else
+    goto <bb 26>; [10.56%]
+
+  <bb 4> [local count: 94021582]:
+  _27 = in_4(D) + 2;
+  _23 = out_14(D) - _27;
+  _22 = (sizetype) _23;
+  if (_22 > 28)
+    goto <bb 5>; [89.44%]
+  else
+    goto <bb 27>; [10.56%]
+
+  <bb 27> [local count: 9926122]:
+  goto <bb 19>; [100.00%]
+
+  <bb 5> [local count: 84095460]:
+  if (_29 <= 14)
+    goto <bb 28>; [10.00%]
+  else
+    goto <bb 6>; [90.00%]
+
+  <bb 28> [local count: 8409546]:
+  goto <bb 10>; [100.00%]
+
+  <bb 6> [local count: 75685914]:
+  bnd.43_72 = _30 >> 4;
+  _82 = {_11, _11, _11, _11, _11, _11, _11, _11};
+  _195 = (sizetype) bnd.43_72;
+  _194 = _195 * 32;
+
+  <bb 7> [local count: 688053764]:
+  # ivtmp.81_197 = PHI <ivtmp.81_196(29), 0(6)>
+  # DEBUG x => NULL
+  # DEBUG BEGIN_STMT
+  vect__6.48_79 = MEM <vector(16) short int> [(int16_t *)in_4(D) + ivtmp.81_197 * 1];
+  vect__7.49_80 = [vec_unpack_lo_expr] vect__6.48_79;
+  vect__7.49_81 = [vec_unpack_hi_expr] vect__6.48_79;
+  vect__12.50_84 = vect__7.49_80 * _82;
+  vect__12.50_85 = vect__7.49_81 * _82;
+  vect__13.51_86 = vect__12.50_84 >> 16;
+  vect__13.51_87 = vect__12.50_85 >> 16;
+  vect__16.52_88 = VEC_PACK_TRUNC_EXPR <vect__13.51_86, vect__13.51_87>;
+  MEM <vector(16) short int> [(int16_t *)out_14(D) + ivtmp.81_197 * 1] = vect__16.52_88;
+  # DEBUG BEGIN_STMT
+  # DEBUG x => NULL
+  # DEBUG BEGIN_STMT
+  ivtmp.81_196 = ivtmp.81_197 + 32;
+  if (_194 != ivtmp.81_196)
+    goto <bb 29>; [89.00%]
+  else
+    goto <bb 8>; [11.00%]
+
+  <bb 29> [local count: 612367850]:
+  goto <bb 7>; [100.00%]
+
+  <bb 8> [local count: 75685914]:
+  _162 = cnt_18(D) & -16;
+  niters_vector_mult_vf.44_73 = (unsigned int) _162;
+  if (_30 == niters_vector_mult_vf.44_73)
+    goto <bb 30>; [6.25%]
+  else
+    goto <bb 9>; [93.75%]
+
+  <bb 30> [local count: 4730370]:
+  goto <bb 22>; [100.00%]
+
+  <bb 9> [local count: 70955545]:
+  niters.55_95 = _30 - niters_vector_mult_vf.44_73;
+  _114 = niters.55_95 + 4294967295;
+  if (_114 <= 6)
+    goto <bb 32>; [11.19%]
+  else
+    goto <bb 31>; [88.81%]
+
+  <bb 32> [local count: 7936509]:
+  goto <bb 12>; [100.00%]
+
+  <bb 31> [local count: 63019036]:
+
+  <bb 10> [local count: 71428582]:
+  # x_32 = PHI <_162(31), 0(28)>
+  # _38 = PHI <niters_vector_mult_vf.44_73(31), 0(28)>
+  # niters.55_40 = PHI <niters.55_95(31), _30(28)>
+  _122 = (sizetype) _38;
+  _123 = _122 * 2;
+  vectp_in.60_121 = in_4(D) + _123;
+  _129 = {_11, _11, _11, _11};
+  vectp_out.67_136 = out_14(D) + _123;
+  # DEBUG x => NULL
+  # DEBUG BEGIN_STMT
+  vect__58.61_126 = MEM <vector(8) short int> [(int16_t *)vectp_in.60_121];
+  vect__59.62_127 = [vec_unpack_lo_expr] vect__58.61_126;
+  vect__59.62_128 = [vec_unpack_hi_expr] vect__58.61_126;
+  vect__60.63_131 = vect__59.62_127 * _129;
+  vect__60.63_132 = vect__59.62_128 * _129;
+  vect__61.64_133 = vect__60.63_131 >> 16;
+  vect__61.64_134 = vect__60.63_132 >> 16;
+  vect__63.65_135 = VEC_PACK_TRUNC_EXPR <vect__61.64_133, vect__61.64_134>;
+  MEM <vector(8) short int> [(int16_t *)vectp_out.67_136] = vect__63.65_135;
+  # DEBUG BEGIN_STMT
+  # DEBUG x => NULL
+  # DEBUG BEGIN_STMT
+  _98 = niters.55_40 & 7;
+  if (_98 == 0)
+    goto <bb 33>; [12.50%]
+  else
+    goto <bb 11>; [87.50%]
+
+  <bb 11> [local count: 62500009]:
+  niters_vector_mult_vf.57_118 = niters.55_40 & 4294967288;
+  _120 = (int) niters_vector_mult_vf.57_118;
+  tmp.58_119 = x_32 + _120;
+
+  <bb 12> [local count: 70436518]:
+  # x_115 = PHI <tmp.58_119(11), _162(32)>
+  # DEBUG x => x_115
+  # DEBUG BEGIN_STMT
+  _3 = (long unsigned int) x_115;
+  _5 = _3 * 2;
+  _6 = in_4(D) + _5;
+  _7 = *_6;
+  _12 = (int) _7;
+  _13 = _11 * _12;
+  _15 = _13 >> 16;
+  _16 = out_14(D) + _5;
+  _17 = (short int) _15;
+  *_16 = _17;
+  # DEBUG BEGIN_STMT
+  x_55 = x_115 + 1;
+  # DEBUG x => x_55
+  # DEBUG BEGIN_STMT
+  if (cnt_18(D) > x_55)
+    goto <bb 13>; [85.71%]
+  else
+    goto <bb 34>; [14.29%]
+
+  <bb 34> [local count: 10062360]:
+  goto <bb 21>; [100.00%]
+
+  <bb 13> [local count: 60374159]:
+  # DEBUG x => x_55
+  # DEBUG BEGIN_STMT
+  _59 = _5 + 2;
+  _60 = in_4(D) + _59;
+  _61 = *_60;
+  _62 = (int) _61;
+  _63 = _11 * _62;
+  _65 = _63 >> 16;
+  _67 = out_14(D) + _59;
+  _111 = (short int) _65;
+  *_67 = _111;
+  # DEBUG BEGIN_STMT
+  x_137 = x_115 + 2;
+  # DEBUG x => x_137
+  # DEBUG BEGIN_STMT
+  if (cnt_18(D) > x_137)
+    goto <bb 14>; [85.71%]
+  else
+    goto <bb 35>; [14.29%]
+
+  <bb 35> [local count: 8624880]:
+  goto <bb 21>; [100.00%]
+
+  <bb 14> [local count: 51749279]:
+  # DEBUG x => x_137
+  # DEBUG BEGIN_STMT
+  _83 = _5 + 4;
+  _35 = in_4(D) + _83;
+  _36 = *_35;
+  _64 = (int) _36;
+  _21 = _11 * _64;
+  _33 = _21 >> 16;
+  _34 = out_14(D) + _83;
+  _144 = (short int) _33;
+  *_34 = _144;
+  # DEBUG BEGIN_STMT
+  x_146 = x_115 + 3;
+  # DEBUG x => x_146
+  # DEBUG BEGIN_STMT
+  if (cnt_18(D) > x_146)
+    goto <bb 15>; [85.71%]
+  else
+    goto <bb 36>; [14.29%]
+
+  <bb 36> [local count: 7392754]:
+  goto <bb 21>; [100.00%]
+
+  <bb 15> [local count: 44356526]:
+  # DEBUG x => x_146
+  # DEBUG BEGIN_STMT
+  _150 = _5 + 6;
+  _151 = in_4(D) + _150;
+  _152 = *_151;
+  _153 = (int) _152;
+  _154 = _11 * _153;
+  _155 = _154 >> 16;
+  _156 = out_14(D) + _150;
+  _157 = (short int) _155;
+  *_156 = _157;
+  # DEBUG BEGIN_STMT
+  x_159 = x_115 + 4;
+  # DEBUG x => x_159
+  # DEBUG BEGIN_STMT
+  if (cnt_18(D) > x_159)
+    goto <bb 16>; [85.71%]
+  else
+    goto <bb 37>; [14.29%]
+
+  <bb 37> [local count: 6336647]:
+  goto <bb 21>; [100.00%]
+
+  <bb 16> [local count: 38019879]:
+  # DEBUG x => x_159
+  # DEBUG BEGIN_STMT
+  _163 = _5 + 8;
+  _164 = in_4(D) + _163;
+  _165 = *_164;
+  _166 = (int) _165;
+  _167 = _11 * _166;
+  _168 = _167 >> 16;
+  _169 = out_14(D) + _163;
+  _170 = (short int) _168;
+  *_169 = _170;
+  # DEBUG BEGIN_STMT
+  x_172 = x_115 + 5;
+  # DEBUG x => x_172
+  # DEBUG BEGIN_STMT
+  if (cnt_18(D) > x_172)
+    goto <bb 17>; [85.71%]
+  else
+    goto <bb 38>; [14.29%]
+
+  <bb 38> [local count: 5431411]:
+  goto <bb 21>; [100.00%]
+
+  <bb 17> [local count: 32588468]:
+  # DEBUG x => x_172
+  # DEBUG BEGIN_STMT
+  _176 = _5 + 10;
+  _177 = in_4(D) + _176;
+  _178 = *_177;
+  _179 = (int) _178;
+  _180 = _11 * _179;
+  _181 = _180 >> 16;
+  _182 = out_14(D) + _176;
+  _183 = (short int) _181;
+  *_182 = _183;
+  # DEBUG BEGIN_STMT
+  x_185 = x_115 + 6;
+  # DEBUG x => x_185
+  # DEBUG BEGIN_STMT
+  if (cnt_18(D) > x_185)
+    goto <bb 18>; [85.71%]
+  else
+    goto <bb 39>; [14.29%]
+
+  <bb 39> [local count: 4655495]:
+  goto <bb 21>; [100.00%]
+
+  <bb 18> [local count: 27932970]:
+  # DEBUG x => x_185
+  # DEBUG BEGIN_STMT
+  _100 = _5 + 12;
+  _101 = in_4(D) + _100;
+  _102 = *_101;
+  _103 = (int) _102;
+  _104 = _11 * _103;
+  _105 = _104 >> 16;
+  _106 = out_14(D) + _100;
+  _107 = (short int) _105;
+  *_106 = _107;
+  # DEBUG BEGIN_STMT
+  # DEBUG x => x_115 + 7
+  # DEBUG BEGIN_STMT
+  goto <bb 21>; [100.00%]
+
+  <bb 26> [local count: 11097742]:
+
+  <bb 19> [local count: 21023864]:
+  _199 = (sizetype) cnt_18(D);
+  _198 = _199 * 2;
+
+  <bb 20> [local count: 191126041]:
+  # ivtmp.77_201 = PHI <0(19), ivtmp.77_200(40)>
+  # DEBUG x => (int) (ivtmp.77_201 /[ex] 2)
+  # DEBUG BEGIN_STMT
+  _43 = MEM[(int16_t *)in_4(D) + ivtmp.77_201 * 1];
+  _44 = (int) _43;
+  _45 = _11 * _44;
+  _46 = _45 >> 16;
+  _48 = (short int) _46;
+  MEM[(int16_t *)out_14(D) + ivtmp.77_201 * 1] = _48;
+  # DEBUG BEGIN_STMT
+  # DEBUG x => (int) (ivtmp.77_201 /[ex] 2) + 1
+  # DEBUG BEGIN_STMT
+  ivtmp.77_200 = ivtmp.77_201 + 2;
+  if (_198 != ivtmp.77_200)
+    goto <bb 40>; [89.00%]
+  else
+    goto <bb 41>; [11.00%]
+
+  <bb 41> [local count: 21023864]:
+  goto <bb 23>; [100.00%]
+
+  <bb 40> [local count: 170102177]:
+  goto <bb 20>; [100.00%]
+
+  <bb 33> [local count: 8928573]:
+
+  <bb 21> [local count: 79365090]:
+
+  <bb 22> [local count: 84095460]:
+
+  <bb 23> [local count: 105119324]:
+
+  <bb 24> [local count: 118111600]:
+  return;
+
+}
+
+
+
+;; Function sum_sample (sum_sample, funcdef_no=22, decl_uid=3942, cgraph_uid=23, symbol_order=22)
+
+===== Basic block count: 1 =====
+----- Statement count: 1 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 2 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 3 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 4 -----
+# DEBUG x => 0
+----- Statement count: 5 -----
+# DEBUG t => t_8(D)
+----- Statement count: 6 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 7 -----
+ivtmp.102_15 = (unsigned long) buff_10(D);
+----- Statement count: 8 -----
+_3 = ivtmp.102_15 + 100000000;
+===== Basic block count: 2 =====
+----- Statement count: 9 -----
+# DEBUG x => NULL
+----- Statement count: 10 -----
+# DEBUG t => NULL
+----- Statement count: 11 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 12 -----
+# DEBUG D#19 => D#20 * 2
+----- Statement count: 13 -----
+# DEBUG D#18 => buff_10(D) + D#19
+----- Statement count: 14 -----
+_1 = (void *) ivtmp.102_25;
+----- Statement count: 15 -----
+# VUSE <.MEM_9(D)>
+vect__4.92_19 = MEM <vector(8) short int> [(int16_t *)_1];
+----- Statement count: 16 -----
+vect__5.93_18 = [vec_unpack_lo_expr] vect__4.92_19;
+----- Statement count: 17 -----
+vect__5.93_16 = [vec_unpack_hi_expr] vect__4.92_19;
+----- Statement count: 18 -----
+vect_t_11.95_13 = vect_t_15.94_14 + vect__5.93_18;
+----- Statement count: 19 -----
+vect_t_11.95_7 = vect_t_11.95_13 + vect__5.93_16;
+----- Statement count: 20 -----
+# DEBUG D#17 => *D#18
+----- Statement count: 21 -----
+# DEBUG D#16 => (int) D#17
+----- Statement count: 22 -----
+# DEBUG t => D#15
+----- Statement count: 23 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 24 -----
+# DEBUG x => NULL
+----- Statement count: 25 -----
+# DEBUG t => D#15
+----- Statement count: 26 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 27 -----
+ivtmp.102_17 = ivtmp.102_25 + 16;
+----- Statement count: 28 -----
+if (_3 != ivtmp.102_17)
+===== Basic block count: 3 =====
+===== Basic block count: 4 =====
+----- Statement count: 29 -----
+_27 = .REDUC_PLUS (vect_t_11.95_7);
+----- Statement count: 30 -----
+_28 = t_8(D) + _27;
+----- Statement count: 31 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 32 -----
+# VUSE <.MEM_9(D)>
+return _28;
+int sum_sample (int16_t * buff, size_t samples)
+{
+  unsigned long ivtmp.102;
+  vector(4) int vect_t_11.95;
+  vector(4) int vect_t_15.94;
+  vector(4) int vect__5.93;
+  vector(8) short int vect__4.92;
+  int t;
+  void * _1;
+  unsigned long _3;
+  int _27;
+  int _28;
+
+  <bb 2> [local count: 10737416]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG x => 0
+  # DEBUG t => t_8(D)
+  # DEBUG BEGIN_STMT
+  ivtmp.102_15 = (unsigned long) buff_10(D);
+  _3 = ivtmp.102_15 + 100000000;
+
+  <bb 3> [local count: 1063004408]:
+  # vect_t_15.94_14 = PHI <vect_t_11.95_7(5), { 0, 0, 0, 0 }(2)>
+  # ivtmp.102_25 = PHI <ivtmp.102_17(5), ivtmp.102_15(2)>
+  # DEBUG x => NULL
+  # DEBUG t => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG D#19 => D#20 * 2
+  # DEBUG D#18 => buff_10(D) + D#19
+  _1 = (void *) ivtmp.102_25;
+  vect__4.92_19 = MEM <vector(8) short int> [(int16_t *)_1];
+  vect__5.93_18 = [vec_unpack_lo_expr] vect__4.92_19;
+  vect__5.93_16 = [vec_unpack_hi_expr] vect__4.92_19;
+  vect_t_11.95_13 = vect_t_15.94_14 + vect__5.93_18;
+  vect_t_11.95_7 = vect_t_11.95_13 + vect__5.93_16;
+  # DEBUG D#17 => *D#18
+  # DEBUG D#16 => (int) D#17
+  # DEBUG t => D#15
+  # DEBUG BEGIN_STMT
+  # DEBUG x => NULL
+  # DEBUG t => D#15
+  # DEBUG BEGIN_STMT
+  ivtmp.102_17 = ivtmp.102_25 + 16;
+  if (_3 != ivtmp.102_17)
+    goto <bb 5>; [98.99%]
+  else
+    goto <bb 4>; [1.01%]
+
+  <bb 5> [local count: 1052266995]:
+  goto <bb 3>; [100.00%]
+
+  <bb 4> [local count: 10737416]:
+  _27 = .REDUC_PLUS (vect_t_11.95_7);
+  _28 = t_8(D) + _27;
+  # DEBUG BEGIN_STMT
+  return _28;
+
+}
+
+
+
+;; Function scale_samples.resolver (scale_samples.resolver, funcdef_no=27, decl_uid=4477, cgraph_uid=32, symbol_order=31)
+
+===== Basic block count: 1 =====
+----- Statement count: 1 -----
+# .MEM_2 = VDEF <.MEM_1(D)>
+__builtin_cpu_init ();
+----- Statement count: 2 -----
+_3 = __builtin_cpu_supports (&"x86-64-v3"[0]);
+----- Statement count: 3 -----
+if (_3 > 0)
+===== Basic block count: 2 =====
+----- Statement count: 4 -----
+# VUSE <.MEM_2>
+return scale_samples.arch_x86_64_v3;
+===== Basic block count: 3 =====
+----- Statement count: 5 -----
+# VUSE <.MEM_2>
+return scale_samples;
+__attribute__((returns_nonnull))
+void * scale_samples.resolver ()
+{
+  int _3;
+
+  <bb 2> [local count: 1073741824]:
+  __builtin_cpu_init ();
+  _3 = __builtin_cpu_supports (&"x86-64-v3"[0]);
+  if (_3 > 0)
+    goto <bb 3>; [100.00%]
+  else
+    goto <bb 4>; [0.00%]
+
+  <bb 3> [local count: 1073741824]:
+  return scale_samples.arch_x86_64_v3;
+
+  <bb 4> [count: 0]:
+  return scale_samples;
+
+}
+
+
+
+;; Function main (main, funcdef_no=24, decl_uid=3961, cgraph_uid=25, symbol_order=24) (executed once)
+
+===== Basic block count: 1 =====
+----- Statement count: 1 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 2 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 3 -----
+# DEBUG ttl => 0
+----- Statement count: 4 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 5 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 6 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 7 -----
+# .MEM_2 = VDEF <.MEM_1(D)>
+in_3 = calloc (50000000, 2);
+----- Statement count: 8 -----
+# DEBUG in => in_3
+----- Statement count: 9 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 10 -----
+# .MEM_4 = VDEF <.MEM_2>
+out_5 = calloc (50000000, 2);
+----- Statement count: 11 -----
+# DEBUG out => out_5
+----- Statement count: 12 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 13 -----
+# .MEM_6 = VDEF <.MEM_4>
+vol_createsample (in_3, 50000000);
+----- Statement count: 14 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 15 -----
+# .MEM_7 = VDEF <.MEM_6>
+scale_samples (in_3, out_5, 50000000, 50);
+----- Statement count: 16 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 17 -----
+# DEBUG buff => out_5
+----- Statement count: 18 -----
+# DEBUG samples => 50000000
+----- Statement count: 19 -----
+# DEBUG INLINE_ENTRY sum_sample
+----- Statement count: 20 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 21 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 22 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 23 -----
+# DEBUG x => 0
+----- Statement count: 24 -----
+# DEBUG t => t_18(D)
+----- Statement count: 25 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 26 -----
+ivtmp.123_21 = (unsigned long) out_5;
+----- Statement count: 27 -----
+_12 = ivtmp.123_21 + 100000000;
+===== Basic block count: 2 =====
+----- Statement count: 28 -----
+# DEBUG x => NULL
+----- Statement count: 29 -----
+# DEBUG t => NULL
+----- Statement count: 30 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 31 -----
+# DEBUG D#26 => D#27 * 2
+----- Statement count: 32 -----
+# DEBUG D#25 => out_5 + D#26
+----- Statement count: 33 -----
+_10 = (void *) ivtmp.123_31;
+----- Statement count: 34 -----
+# VUSE <.MEM_7>
+vect__13.113_25 = MEM <vector(8) short int> [(int16_t *)_10];
+----- Statement count: 35 -----
+vect__14.114_24 = [vec_unpack_lo_expr] vect__13.113_25;
+----- Statement count: 36 -----
+vect__14.114_23 = [vec_unpack_hi_expr] vect__13.113_25;
+----- Statement count: 37 -----
+vect_t_16.116_19 = vect_t_22.115_20 + vect__14.114_24;
+----- Statement count: 38 -----
+vect_t_16.116_15 = vect_t_16.116_19 + vect__14.114_23;
+----- Statement count: 39 -----
+# DEBUG D#24 => *D#25
+----- Statement count: 40 -----
+# DEBUG D#23 => (int) D#24
+----- Statement count: 41 -----
+# DEBUG t => D#22
+----- Statement count: 42 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 43 -----
+# DEBUG x => NULL
+----- Statement count: 44 -----
+# DEBUG t => D#22
+----- Statement count: 45 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 46 -----
+ivtmp.123_22 = ivtmp.123_31 + 16;
+----- Statement count: 47 -----
+if (_12 != ivtmp.123_22)
+===== Basic block count: 3 =====
+===== Basic block count: 4 =====
+----- Statement count: 48 -----
+_33 = .REDUC_PLUS (vect_t_16.116_15);
+----- Statement count: 49 -----
+_34 = t_18(D) + _33;
+----- Statement count: 50 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 51 -----
+# DEBUG buff => NULL
+----- Statement count: 52 -----
+# DEBUG samples => NULL
+----- Statement count: 53 -----
+# DEBUG x => NULL
+----- Statement count: 54 -----
+# DEBUG t => NULL
+----- Statement count: 55 -----
+# DEBUG ttl => _34
+----- Statement count: 56 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 57 -----
+# .MEM_9 = VDEF <.MEM_7>
+printf ("Result: %d\n", _34);
+----- Statement count: 58 -----
+# DEBUG BEGIN_STMT
+----- Statement count: 59 -----
+# VUSE <.MEM_9>
+return 0;
+int main ()
+{
+  unsigned long ivtmp.123;
+  vector(4) int vect_t_16.116;
+  vector(4) int vect_t_22.115;
+  vector(4) int vect__14.114;
+  vector(8) short int vect__13.113;
+  int t;
+  int16_t * out;
+  int16_t * in;
+  void * _10;
+  unsigned long _12;
+  int _33;
+  int _34;
+
+  <bb 2> [local count: 10737416]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG ttl => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  in_3 = calloc (50000000, 2);
+  # DEBUG in => in_3
+  # DEBUG BEGIN_STMT
+  out_5 = calloc (50000000, 2);
+  # DEBUG out => out_5
+  # DEBUG BEGIN_STMT
+  vol_createsample (in_3, 50000000);
+  # DEBUG BEGIN_STMT
+  scale_samples (in_3, out_5, 50000000, 50);
+  # DEBUG BEGIN_STMT
+  # DEBUG buff => out_5
+  # DEBUG samples => 50000000
+  # DEBUG INLINE_ENTRY sum_sample
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG x => 0
+  # DEBUG t => t_18(D)
+  # DEBUG BEGIN_STMT
+  ivtmp.123_21 = (unsigned long) out_5;
+  _12 = ivtmp.123_21 + 100000000;
+
+  <bb 3> [local count: 1063004408]:
+  # vect_t_22.115_20 = PHI <vect_t_16.116_15(5), { 0, 0, 0, 0 }(2)>
+  # ivtmp.123_31 = PHI <ivtmp.123_22(5), ivtmp.123_21(2)>
+  # DEBUG x => NULL
+  # DEBUG t => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG D#26 => D#27 * 2
+  # DEBUG D#25 => out_5 + D#26
+  _10 = (void *) ivtmp.123_31;
+  vect__13.113_25 = MEM <vector(8) short int> [(int16_t *)_10];
+  vect__14.114_24 = [vec_unpack_lo_expr] vect__13.113_25;
+  vect__14.114_23 = [vec_unpack_hi_expr] vect__13.113_25;
+  vect_t_16.116_19 = vect_t_22.115_20 + vect__14.114_24;
+  vect_t_16.116_15 = vect_t_16.116_19 + vect__14.114_23;
+  # DEBUG D#24 => *D#25
+  # DEBUG D#23 => (int) D#24
+  # DEBUG t => D#22
+  # DEBUG BEGIN_STMT
+  # DEBUG x => NULL
+  # DEBUG t => D#22
+  # DEBUG BEGIN_STMT
+  ivtmp.123_22 = ivtmp.123_31 + 16;
+  if (_12 != ivtmp.123_22)
+    goto <bb 5>; [98.99%]
+  else
+    goto <bb 4>; [1.01%]
+
+  <bb 5> [local count: 1052266995]:
+  goto <bb 3>; [100.00%]
+
+  <bb 4> [local count: 10737416]:
+  _33 = .REDUC_PLUS (vect_t_16.116_15);
+  _34 = t_18(D) + _33;
+  # DEBUG BEGIN_STMT
+  # DEBUG buff => NULL
+  # DEBUG samples => NULL
+  # DEBUG x => NULL
+  # DEBUG t => NULL
+  # DEBUG ttl => _34
+  # DEBUG BEGIN_STMT
+  printf ("Result: %d\n", _34);
+  # DEBUG BEGIN_STMT
+  return 0;
+
+}
+
+
