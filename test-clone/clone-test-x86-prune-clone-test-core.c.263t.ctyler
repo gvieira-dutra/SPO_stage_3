@@ -1,386 +1,22 @@
 
 ;; Function scale_samples (scale_samples.default, funcdef_no=23, decl_uid=3954, cgraph_uid=24, symbol_order=23)
 
-===== Basic block count: 1 =====
------ Statement count: 1 -----
-# DEBUG BEGIN_STMT
------ Statement count: 2 -----
-# DEBUG BEGIN_STMT
------ Statement count: 3 -----
-# DEBUG x => 0
------ Statement count: 4 -----
-# DEBUG BEGIN_STMT
------ Statement count: 5 -----
-if (cnt_16(D) > 0)
-===== Basic block count: 2 =====
-===== Basic block count: 3 =====
------ Statement count: 6 -----
-_6 = volume_18(D) * 32767;
------ Statement count: 7 -----
-_7 = _6 / 100;
------ Statement count: 8 -----
-_8 = _7 << 1;
------ Statement count: 9 -----
-_32 = (unsigned int) cnt_16(D);
------ Statement count: 10 -----
-_31 = _32 + 4294967295;
------ Statement count: 11 -----
-if (_31 > 6)
-===== Basic block count: 4 =====
------ Statement count: 12 -----
-_29 = in_17(D) + 2;
------ Statement count: 13 -----
-_28 = out_19(D) - _29;
------ Statement count: 14 -----
-_27 = (sizetype) _28;
------ Statement count: 15 -----
-if (_27 > 12)
-===== Basic block count: 5 =====
-===== Basic block count: 6 =====
------ Statement count: 16 -----
-bnd.8_66 = _32 >> 3;
------ Statement count: 17 -----
-_74 = {_8, _8, _8, _8};
------ Statement count: 18 -----
-_35 = (sizetype) bnd.8_66;
------ Statement count: 19 -----
-_94 = _35 * 16;
-===== Basic block count: 7 =====
------ Statement count: 20 -----
-# DEBUG x => NULL
------ Statement count: 21 -----
-# DEBUG BEGIN_STMT
------ Statement count: 22 -----
-# VUSE <.MEM_25>
-vect__4.13_71 = MEM <vector(8) short int> [(int16_t *)in_17(D) + ivtmp.33_50 * 1];
------ Statement count: 23 -----
-vect__5.14_72 = [vec_unpack_lo_expr] vect__4.13_71;
------ Statement count: 24 -----
-vect__5.14_73 = [vec_unpack_hi_expr] vect__4.13_71;
------ Statement count: 25 -----
-vect__9.15_76 = vect__5.14_72 * _74;
------ Statement count: 26 -----
-vect__9.15_77 = vect__5.14_73 * _74;
------ Statement count: 27 -----
-vect__10.16_78 = vect__9.15_76 >> 16;
------ Statement count: 28 -----
-vect__10.16_79 = vect__9.15_77 >> 16;
------ Statement count: 29 -----
-vect__12.17_80 = VEC_PACK_TRUNC_EXPR <vect__10.16_78, vect__10.16_79>;
------ Statement count: 30 -----
-# .MEM_83 = VDEF <.MEM_25>
-MEM <vector(8) short int> [(int16_t *)out_19(D) + ivtmp.33_50 * 1] = vect__12.17_80;
------ Statement count: 31 -----
-# DEBUG BEGIN_STMT
------ Statement count: 32 -----
-# DEBUG x => NULL
------ Statement count: 33 -----
-# DEBUG BEGIN_STMT
------ Statement count: 34 -----
-ivtmp.33_24 = ivtmp.33_50 + 16;
------ Statement count: 35 -----
-if (ivtmp.33_24 != _94)
-===== Basic block count: 8 =====
-===== Basic block count: 9 =====
------ Statement count: 36 -----
-_52 = cnt_16(D) & -8;
------ Statement count: 37 -----
-niters_vector_mult_vf.9_67 = (unsigned int) _52;
------ Statement count: 38 -----
-if (_32 == niters_vector_mult_vf.9_67)
-===== Basic block count: 10 =====
------ Statement count: 39 -----
-# DEBUG x => _52
------ Statement count: 40 -----
-# DEBUG BEGIN_STMT
------ Statement count: 41 -----
-_2 = (long unsigned int) niters_vector_mult_vf.9_67;
------ Statement count: 42 -----
-_3 = _2 * 2;
------ Statement count: 43 -----
-_4 = in_17(D) + _3;
------ Statement count: 44 -----
-# VUSE <.MEM_83>
-_5 = *_4;
------ Statement count: 45 -----
-_9 = (int) _5;
------ Statement count: 46 -----
-_10 = _8 * _9;
------ Statement count: 47 -----
-_11 = _10 >> 16;
------ Statement count: 48 -----
-_12 = out_19(D) + _3;
------ Statement count: 49 -----
-_21 = (short int) _11;
------ Statement count: 50 -----
-# .MEM_65 = VDEF <.MEM_83>
-*_12 = _21;
------ Statement count: 51 -----
-# DEBUG BEGIN_STMT
------ Statement count: 52 -----
-x_75 = _52 + 1;
------ Statement count: 53 -----
-# DEBUG x => x_75
------ Statement count: 54 -----
-# DEBUG BEGIN_STMT
------ Statement count: 55 -----
-if (cnt_16(D) > x_75)
-===== Basic block count: 11 =====
-===== Basic block count: 12 =====
------ Statement count: 56 -----
-# DEBUG x => x_75
------ Statement count: 57 -----
-# DEBUG BEGIN_STMT
------ Statement count: 58 -----
-_33 = _3 + 2;
------ Statement count: 59 -----
-_34 = in_17(D) + _33;
------ Statement count: 60 -----
-# VUSE <.MEM_65>
-_86 = *_34;
------ Statement count: 61 -----
-_87 = (int) _86;
------ Statement count: 62 -----
-_88 = _8 * _87;
------ Statement count: 63 -----
-_89 = _88 >> 16;
------ Statement count: 64 -----
-_90 = out_19(D) + _33;
------ Statement count: 65 -----
-_91 = (short int) _89;
------ Statement count: 66 -----
-# .MEM_92 = VDEF <.MEM_65>
-*_90 = _91;
------ Statement count: 67 -----
-# DEBUG BEGIN_STMT
------ Statement count: 68 -----
-x_93 = _52 + 2;
------ Statement count: 69 -----
-# DEBUG x => x_93
------ Statement count: 70 -----
-# DEBUG BEGIN_STMT
------ Statement count: 71 -----
-if (cnt_16(D) > x_93)
-===== Basic block count: 13 =====
-===== Basic block count: 14 =====
------ Statement count: 72 -----
-# DEBUG x => x_93
------ Statement count: 73 -----
-# DEBUG BEGIN_STMT
------ Statement count: 74 -----
-_97 = _3 + 4;
------ Statement count: 75 -----
-_98 = in_17(D) + _97;
------ Statement count: 76 -----
-# VUSE <.MEM_92>
-_99 = *_98;
------ Statement count: 77 -----
-_100 = (int) _99;
------ Statement count: 78 -----
-_101 = _8 * _100;
------ Statement count: 79 -----
-_102 = _101 >> 16;
------ Statement count: 80 -----
-_103 = out_19(D) + _97;
------ Statement count: 81 -----
-_104 = (short int) _102;
------ Statement count: 82 -----
-# .MEM_105 = VDEF <.MEM_92>
-*_103 = _104;
------ Statement count: 83 -----
-# DEBUG BEGIN_STMT
------ Statement count: 84 -----
-x_106 = _52 + 3;
------ Statement count: 85 -----
-# DEBUG x => x_106
------ Statement count: 86 -----
-# DEBUG BEGIN_STMT
------ Statement count: 87 -----
-if (cnt_16(D) > x_106)
-===== Basic block count: 15 =====
-===== Basic block count: 16 =====
------ Statement count: 88 -----
-# DEBUG x => x_106
------ Statement count: 89 -----
-# DEBUG BEGIN_STMT
------ Statement count: 90 -----
-_110 = _3 + 6;
------ Statement count: 91 -----
-_111 = in_17(D) + _110;
------ Statement count: 92 -----
-# VUSE <.MEM_105>
-_112 = *_111;
------ Statement count: 93 -----
-_113 = (int) _112;
------ Statement count: 94 -----
-_114 = _8 * _113;
------ Statement count: 95 -----
-_115 = _114 >> 16;
------ Statement count: 96 -----
-_116 = out_19(D) + _110;
------ Statement count: 97 -----
-_117 = (short int) _115;
------ Statement count: 98 -----
-# .MEM_118 = VDEF <.MEM_105>
-*_116 = _117;
------ Statement count: 99 -----
-# DEBUG BEGIN_STMT
------ Statement count: 100 -----
-x_119 = _52 + 4;
------ Statement count: 101 -----
-# DEBUG x => x_119
------ Statement count: 102 -----
-# DEBUG BEGIN_STMT
------ Statement count: 103 -----
-if (cnt_16(D) > x_119)
-===== Basic block count: 17 =====
-===== Basic block count: 18 =====
------ Statement count: 104 -----
-# DEBUG x => x_119
------ Statement count: 105 -----
-# DEBUG BEGIN_STMT
------ Statement count: 106 -----
-_123 = _3 + 8;
------ Statement count: 107 -----
-_124 = in_17(D) + _123;
------ Statement count: 108 -----
-# VUSE <.MEM_118>
-_125 = *_124;
------ Statement count: 109 -----
-_126 = (int) _125;
------ Statement count: 110 -----
-_127 = _8 * _126;
------ Statement count: 111 -----
-_128 = _127 >> 16;
------ Statement count: 112 -----
-_129 = out_19(D) + _123;
------ Statement count: 113 -----
-_130 = (short int) _128;
------ Statement count: 114 -----
-# .MEM_131 = VDEF <.MEM_118>
-*_129 = _130;
------ Statement count: 115 -----
-# DEBUG BEGIN_STMT
------ Statement count: 116 -----
-x_132 = _52 + 5;
------ Statement count: 117 -----
-# DEBUG x => x_132
------ Statement count: 118 -----
-# DEBUG BEGIN_STMT
------ Statement count: 119 -----
-if (cnt_16(D) > x_132)
-===== Basic block count: 19 =====
-===== Basic block count: 20 =====
------ Statement count: 120 -----
-# DEBUG x => x_132
------ Statement count: 121 -----
-# DEBUG BEGIN_STMT
------ Statement count: 122 -----
-_136 = _3 + 10;
------ Statement count: 123 -----
-_137 = in_17(D) + _136;
------ Statement count: 124 -----
-# VUSE <.MEM_131>
-_138 = *_137;
------ Statement count: 125 -----
-_139 = (int) _138;
------ Statement count: 126 -----
-_140 = _8 * _139;
------ Statement count: 127 -----
-_141 = _140 >> 16;
------ Statement count: 128 -----
-_142 = out_19(D) + _136;
------ Statement count: 129 -----
-_143 = (short int) _141;
------ Statement count: 130 -----
-# .MEM_144 = VDEF <.MEM_131>
-*_142 = _143;
------ Statement count: 131 -----
-# DEBUG BEGIN_STMT
------ Statement count: 132 -----
-x_145 = _52 + 6;
------ Statement count: 133 -----
-# DEBUG x => x_145
------ Statement count: 134 -----
-# DEBUG BEGIN_STMT
------ Statement count: 135 -----
-if (cnt_16(D) > x_145)
-===== Basic block count: 21 =====
-===== Basic block count: 22 =====
------ Statement count: 136 -----
-# DEBUG x => x_145
------ Statement count: 137 -----
-# DEBUG BEGIN_STMT
------ Statement count: 138 -----
-_54 = _3 + 12;
------ Statement count: 139 -----
-_55 = in_17(D) + _54;
------ Statement count: 140 -----
-# VUSE <.MEM_144>
-_56 = *_55;
------ Statement count: 141 -----
-_57 = (int) _56;
------ Statement count: 142 -----
-_58 = _8 * _57;
------ Statement count: 143 -----
-_59 = _58 >> 16;
------ Statement count: 144 -----
-_60 = out_19(D) + _54;
------ Statement count: 145 -----
-_61 = (short int) _59;
------ Statement count: 146 -----
-# .MEM_62 = VDEF <.MEM_144>
-*_60 = _61;
------ Statement count: 147 -----
-# DEBUG BEGIN_STMT
------ Statement count: 148 -----
-# DEBUG x => _52 + 7
------ Statement count: 149 -----
-# DEBUG BEGIN_STMT
-===== Basic block count: 23 =====
-===== Basic block count: 24 =====
------ Statement count: 150 -----
-_146 = (sizetype) cnt_16(D);
------ Statement count: 151 -----
-_22 = _146 * 2;
-===== Basic block count: 25 =====
------ Statement count: 152 -----
-# DEBUG x => (int) (ivtmp.28_23 /[ex] 2)
------ Statement count: 153 -----
-# DEBUG BEGIN_STMT
------ Statement count: 154 -----
-# VUSE <.MEM_13>
-_41 = MEM[(int16_t *)in_17(D) + ivtmp.28_23 * 1];
------ Statement count: 155 -----
-_42 = (int) _41;
------ Statement count: 156 -----
-_43 = _8 * _42;
------ Statement count: 157 -----
-_44 = _43 >> 16;
------ Statement count: 158 -----
-_46 = (short int) _44;
------ Statement count: 159 -----
-# .MEM_47 = VDEF <.MEM_13>
-MEM[(int16_t *)out_19(D) + ivtmp.28_23 * 1] = _46;
------ Statement count: 160 -----
-# DEBUG BEGIN_STMT
------ Statement count: 161 -----
-# DEBUG x => (int) (ivtmp.28_23 /[ex] 2) + 1
------ Statement count: 162 -----
-# DEBUG BEGIN_STMT
------ Statement count: 163 -----
-ivtmp.28_63 = ivtmp.28_23 + 2;
------ Statement count: 164 -----
-if (_22 != ivtmp.28_63)
-===== Basic block count: 26 =====
-===== Basic block count: 27 =====
-===== Basic block count: 28 =====
-===== Basic block count: 29 =====
-===== Basic block count: 30 =====
-===== Basic block count: 31 =====
------ Statement count: 165 -----
-# VUSE <.MEM_37>
-return;
+=== Function 1 Name '__builtin_cpu_supports' ===
+=== Function 2 Name '__builtin_cpu_init' ===
+=== Function 3 Name 'scale_samples.resolver' ===
+=== Function 4 Name 'scale_samples' ===
+=== Function 5 Name 'scale_samples.popcnt' ===
+=== Function 6 Name 'printf' ===
+=== Function 7 Name 'vol_createsample' ===
+=== Function 8 Name 'calloc' ===
+=== Function 9 Name 'main' ===
+=== Function 10 Name 'scale_samples' ===
+=== Function 11 Name 'sum_sample' ===
+
+
+#### End ctyler diagnostics, start regular dump of current gimple ####
+
+
 __attribute__((target ("default"), target_clones ("default", "popcnt")))
 void scale_samples (int16_t * in, int16_t * out, int cnt, int volume)
 {
@@ -755,386 +391,22 @@ void scale_samples (int16_t * in, int16_t * out, int cnt, int volume)
 
 ;; Function scale_samples.popcnt (scale_samples.popcnt, funcdef_no=25, decl_uid=3985, cgraph_uid=30, symbol_order=29)
 
-===== Basic block count: 1 =====
------ Statement count: 1 -----
-# DEBUG BEGIN_STMT
------ Statement count: 2 -----
-# DEBUG BEGIN_STMT
------ Statement count: 3 -----
-# DEBUG x => 0
------ Statement count: 4 -----
-# DEBUG BEGIN_STMT
------ Statement count: 5 -----
-if (cnt_18(D) > 0)
-===== Basic block count: 2 =====
-===== Basic block count: 3 =====
------ Statement count: 6 -----
-_9 = volume_8(D) * 32767;
------ Statement count: 7 -----
-_10 = _9 / 100;
------ Statement count: 8 -----
-_11 = _10 << 1;
------ Statement count: 9 -----
-_32 = (unsigned int) cnt_18(D);
------ Statement count: 10 -----
-_31 = _32 + 4294967295;
------ Statement count: 11 -----
-if (_31 > 6)
-===== Basic block count: 4 =====
------ Statement count: 12 -----
-_29 = in_4(D) + 2;
------ Statement count: 13 -----
-_28 = out_14(D) - _29;
------ Statement count: 14 -----
-_27 = (sizetype) _28;
------ Statement count: 15 -----
-if (_27 > 12)
-===== Basic block count: 5 =====
-===== Basic block count: 6 =====
------ Statement count: 16 -----
-bnd.43_66 = _32 >> 3;
------ Statement count: 17 -----
-_74 = {_11, _11, _11, _11};
------ Statement count: 18 -----
-_35 = (sizetype) bnd.43_66;
------ Statement count: 19 -----
-_94 = _35 * 16;
-===== Basic block count: 7 =====
------ Statement count: 20 -----
-# DEBUG x => NULL
------ Statement count: 21 -----
-# DEBUG BEGIN_STMT
------ Statement count: 22 -----
-# VUSE <.MEM_25>
-vect__6.48_71 = MEM <vector(8) short int> [(int16_t *)in_4(D) + ivtmp.67_50 * 1];
------ Statement count: 23 -----
-vect__7.49_72 = [vec_unpack_lo_expr] vect__6.48_71;
------ Statement count: 24 -----
-vect__7.49_73 = [vec_unpack_hi_expr] vect__6.48_71;
------ Statement count: 25 -----
-vect__12.50_76 = vect__7.49_72 * _74;
------ Statement count: 26 -----
-vect__12.50_77 = vect__7.49_73 * _74;
------ Statement count: 27 -----
-vect__13.51_78 = vect__12.50_76 >> 16;
------ Statement count: 28 -----
-vect__13.51_79 = vect__12.50_77 >> 16;
------ Statement count: 29 -----
-vect__16.52_80 = VEC_PACK_TRUNC_EXPR <vect__13.51_78, vect__13.51_79>;
------ Statement count: 30 -----
-# .MEM_83 = VDEF <.MEM_25>
-MEM <vector(8) short int> [(int16_t *)out_14(D) + ivtmp.67_50 * 1] = vect__16.52_80;
------ Statement count: 31 -----
-# DEBUG BEGIN_STMT
------ Statement count: 32 -----
-# DEBUG x => NULL
------ Statement count: 33 -----
-# DEBUG BEGIN_STMT
------ Statement count: 34 -----
-ivtmp.67_24 = ivtmp.67_50 + 16;
------ Statement count: 35 -----
-if (ivtmp.67_24 != _94)
-===== Basic block count: 8 =====
-===== Basic block count: 9 =====
------ Statement count: 36 -----
-_52 = cnt_18(D) & -8;
------ Statement count: 37 -----
-niters_vector_mult_vf.44_67 = (unsigned int) _52;
------ Statement count: 38 -----
-if (_32 == niters_vector_mult_vf.44_67)
-===== Basic block count: 10 =====
------ Statement count: 39 -----
-# DEBUG x => _52
------ Statement count: 40 -----
-# DEBUG BEGIN_STMT
------ Statement count: 41 -----
-_3 = (long unsigned int) niters_vector_mult_vf.44_67;
------ Statement count: 42 -----
-_5 = _3 * 2;
------ Statement count: 43 -----
-_6 = in_4(D) + _5;
------ Statement count: 44 -----
-# VUSE <.MEM_83>
-_7 = *_6;
------ Statement count: 45 -----
-_12 = (int) _7;
------ Statement count: 46 -----
-_13 = _11 * _12;
------ Statement count: 47 -----
-_15 = _13 >> 16;
------ Statement count: 48 -----
-_16 = out_14(D) + _5;
------ Statement count: 49 -----
-_17 = (short int) _15;
------ Statement count: 50 -----
-# .MEM_65 = VDEF <.MEM_83>
-*_16 = _17;
------ Statement count: 51 -----
-# DEBUG BEGIN_STMT
------ Statement count: 52 -----
-x_75 = _52 + 1;
------ Statement count: 53 -----
-# DEBUG x => x_75
------ Statement count: 54 -----
-# DEBUG BEGIN_STMT
------ Statement count: 55 -----
-if (cnt_18(D) > x_75)
-===== Basic block count: 11 =====
-===== Basic block count: 12 =====
------ Statement count: 56 -----
-# DEBUG x => x_75
------ Statement count: 57 -----
-# DEBUG BEGIN_STMT
------ Statement count: 58 -----
-_33 = _5 + 2;
------ Statement count: 59 -----
-_34 = in_4(D) + _33;
------ Statement count: 60 -----
-# VUSE <.MEM_65>
-_86 = *_34;
------ Statement count: 61 -----
-_87 = (int) _86;
------ Statement count: 62 -----
-_88 = _11 * _87;
------ Statement count: 63 -----
-_89 = _88 >> 16;
------ Statement count: 64 -----
-_90 = out_14(D) + _33;
------ Statement count: 65 -----
-_91 = (short int) _89;
------ Statement count: 66 -----
-# .MEM_92 = VDEF <.MEM_65>
-*_90 = _91;
------ Statement count: 67 -----
-# DEBUG BEGIN_STMT
------ Statement count: 68 -----
-x_93 = _52 + 2;
------ Statement count: 69 -----
-# DEBUG x => x_93
------ Statement count: 70 -----
-# DEBUG BEGIN_STMT
------ Statement count: 71 -----
-if (cnt_18(D) > x_93)
-===== Basic block count: 13 =====
-===== Basic block count: 14 =====
------ Statement count: 72 -----
-# DEBUG x => x_93
------ Statement count: 73 -----
-# DEBUG BEGIN_STMT
------ Statement count: 74 -----
-_97 = _5 + 4;
------ Statement count: 75 -----
-_98 = in_4(D) + _97;
------ Statement count: 76 -----
-# VUSE <.MEM_92>
-_99 = *_98;
------ Statement count: 77 -----
-_100 = (int) _99;
------ Statement count: 78 -----
-_101 = _11 * _100;
------ Statement count: 79 -----
-_102 = _101 >> 16;
------ Statement count: 80 -----
-_103 = out_14(D) + _97;
------ Statement count: 81 -----
-_104 = (short int) _102;
------ Statement count: 82 -----
-# .MEM_105 = VDEF <.MEM_92>
-*_103 = _104;
------ Statement count: 83 -----
-# DEBUG BEGIN_STMT
------ Statement count: 84 -----
-x_106 = _52 + 3;
------ Statement count: 85 -----
-# DEBUG x => x_106
------ Statement count: 86 -----
-# DEBUG BEGIN_STMT
------ Statement count: 87 -----
-if (cnt_18(D) > x_106)
-===== Basic block count: 15 =====
-===== Basic block count: 16 =====
------ Statement count: 88 -----
-# DEBUG x => x_106
------ Statement count: 89 -----
-# DEBUG BEGIN_STMT
------ Statement count: 90 -----
-_110 = _5 + 6;
------ Statement count: 91 -----
-_111 = in_4(D) + _110;
------ Statement count: 92 -----
-# VUSE <.MEM_105>
-_112 = *_111;
------ Statement count: 93 -----
-_113 = (int) _112;
------ Statement count: 94 -----
-_114 = _11 * _113;
------ Statement count: 95 -----
-_115 = _114 >> 16;
------ Statement count: 96 -----
-_116 = out_14(D) + _110;
------ Statement count: 97 -----
-_117 = (short int) _115;
------ Statement count: 98 -----
-# .MEM_118 = VDEF <.MEM_105>
-*_116 = _117;
------ Statement count: 99 -----
-# DEBUG BEGIN_STMT
------ Statement count: 100 -----
-x_119 = _52 + 4;
------ Statement count: 101 -----
-# DEBUG x => x_119
------ Statement count: 102 -----
-# DEBUG BEGIN_STMT
------ Statement count: 103 -----
-if (cnt_18(D) > x_119)
-===== Basic block count: 17 =====
-===== Basic block count: 18 =====
------ Statement count: 104 -----
-# DEBUG x => x_119
------ Statement count: 105 -----
-# DEBUG BEGIN_STMT
------ Statement count: 106 -----
-_123 = _5 + 8;
------ Statement count: 107 -----
-_124 = in_4(D) + _123;
------ Statement count: 108 -----
-# VUSE <.MEM_118>
-_125 = *_124;
------ Statement count: 109 -----
-_126 = (int) _125;
------ Statement count: 110 -----
-_127 = _11 * _126;
------ Statement count: 111 -----
-_128 = _127 >> 16;
------ Statement count: 112 -----
-_129 = out_14(D) + _123;
------ Statement count: 113 -----
-_130 = (short int) _128;
------ Statement count: 114 -----
-# .MEM_131 = VDEF <.MEM_118>
-*_129 = _130;
------ Statement count: 115 -----
-# DEBUG BEGIN_STMT
------ Statement count: 116 -----
-x_132 = _52 + 5;
------ Statement count: 117 -----
-# DEBUG x => x_132
------ Statement count: 118 -----
-# DEBUG BEGIN_STMT
------ Statement count: 119 -----
-if (cnt_18(D) > x_132)
-===== Basic block count: 19 =====
-===== Basic block count: 20 =====
------ Statement count: 120 -----
-# DEBUG x => x_132
------ Statement count: 121 -----
-# DEBUG BEGIN_STMT
------ Statement count: 122 -----
-_136 = _5 + 10;
------ Statement count: 123 -----
-_137 = in_4(D) + _136;
------ Statement count: 124 -----
-# VUSE <.MEM_131>
-_138 = *_137;
------ Statement count: 125 -----
-_139 = (int) _138;
------ Statement count: 126 -----
-_140 = _11 * _139;
------ Statement count: 127 -----
-_141 = _140 >> 16;
------ Statement count: 128 -----
-_142 = out_14(D) + _136;
------ Statement count: 129 -----
-_143 = (short int) _141;
------ Statement count: 130 -----
-# .MEM_144 = VDEF <.MEM_131>
-*_142 = _143;
------ Statement count: 131 -----
-# DEBUG BEGIN_STMT
------ Statement count: 132 -----
-x_145 = _52 + 6;
------ Statement count: 133 -----
-# DEBUG x => x_145
------ Statement count: 134 -----
-# DEBUG BEGIN_STMT
------ Statement count: 135 -----
-if (cnt_18(D) > x_145)
-===== Basic block count: 21 =====
-===== Basic block count: 22 =====
------ Statement count: 136 -----
-# DEBUG x => x_145
------ Statement count: 137 -----
-# DEBUG BEGIN_STMT
------ Statement count: 138 -----
-_54 = _5 + 12;
------ Statement count: 139 -----
-_55 = in_4(D) + _54;
------ Statement count: 140 -----
-# VUSE <.MEM_144>
-_56 = *_55;
------ Statement count: 141 -----
-_57 = (int) _56;
------ Statement count: 142 -----
-_58 = _11 * _57;
------ Statement count: 143 -----
-_59 = _58 >> 16;
------ Statement count: 144 -----
-_60 = out_14(D) + _54;
------ Statement count: 145 -----
-_61 = (short int) _59;
------ Statement count: 146 -----
-# .MEM_62 = VDEF <.MEM_144>
-*_60 = _61;
------ Statement count: 147 -----
-# DEBUG BEGIN_STMT
------ Statement count: 148 -----
-# DEBUG x => _52 + 7
------ Statement count: 149 -----
-# DEBUG BEGIN_STMT
-===== Basic block count: 23 =====
-===== Basic block count: 24 =====
------ Statement count: 150 -----
-_146 = (sizetype) cnt_18(D);
------ Statement count: 151 -----
-_22 = _146 * 2;
-===== Basic block count: 25 =====
------ Statement count: 152 -----
-# DEBUG x => (int) (ivtmp.63_23 /[ex] 2)
------ Statement count: 153 -----
-# DEBUG BEGIN_STMT
------ Statement count: 154 -----
-# VUSE <.MEM_1>
-_41 = MEM[(int16_t *)in_4(D) + ivtmp.63_23 * 1];
------ Statement count: 155 -----
-_42 = (int) _41;
------ Statement count: 156 -----
-_43 = _11 * _42;
------ Statement count: 157 -----
-_44 = _43 >> 16;
------ Statement count: 158 -----
-_46 = (short int) _44;
------ Statement count: 159 -----
-# .MEM_47 = VDEF <.MEM_1>
-MEM[(int16_t *)out_14(D) + ivtmp.63_23 * 1] = _46;
------ Statement count: 160 -----
-# DEBUG BEGIN_STMT
------ Statement count: 161 -----
-# DEBUG x => (int) (ivtmp.63_23 /[ex] 2) + 1
------ Statement count: 162 -----
-# DEBUG BEGIN_STMT
------ Statement count: 163 -----
-ivtmp.63_63 = ivtmp.63_23 + 2;
------ Statement count: 164 -----
-if (_22 != ivtmp.63_63)
-===== Basic block count: 26 =====
-===== Basic block count: 27 =====
-===== Basic block count: 28 =====
-===== Basic block count: 29 =====
-===== Basic block count: 30 =====
-===== Basic block count: 31 =====
------ Statement count: 165 -----
-# VUSE <.MEM_37>
-return;
+=== Function 1 Name '__builtin_cpu_supports' ===
+=== Function 2 Name '__builtin_cpu_init' ===
+=== Function 3 Name 'scale_samples.resolver' ===
+=== Function 4 Name 'scale_samples' ===
+=== Function 5 Name 'scale_samples.popcnt' ===
+=== Function 6 Name 'printf' ===
+=== Function 7 Name 'vol_createsample' ===
+=== Function 8 Name 'calloc' ===
+=== Function 9 Name 'main' ===
+=== Function 10 Name 'scale_samples' ===
+=== Function 11 Name 'sum_sample' ===
+
+
+#### End ctyler diagnostics, start regular dump of current gimple ####
+
+
 __attribute__((target ("popcnt"), target_clones ("default", "popcnt")))
 void scale_samples.popcnt (int16_t * in, int16_t * out, int cnt, int volume)
 {
@@ -1509,76 +781,22 @@ void scale_samples.popcnt (int16_t * in, int16_t * out, int cnt, int volume)
 
 ;; Function sum_sample (sum_sample, funcdef_no=22, decl_uid=3942, cgraph_uid=23, symbol_order=22)
 
-===== Basic block count: 1 =====
------ Statement count: 1 -----
-# DEBUG BEGIN_STMT
------ Statement count: 2 -----
-# DEBUG BEGIN_STMT
------ Statement count: 3 -----
-# DEBUG BEGIN_STMT
------ Statement count: 4 -----
-# DEBUG x => 0
------ Statement count: 5 -----
-# DEBUG t => t_8(D)
------ Statement count: 6 -----
-# DEBUG BEGIN_STMT
------ Statement count: 7 -----
-ivtmp.88_15 = (unsigned long) buff_10(D);
------ Statement count: 8 -----
-_3 = ivtmp.88_15 + 100000000;
-===== Basic block count: 2 =====
------ Statement count: 9 -----
-# DEBUG x => NULL
------ Statement count: 10 -----
-# DEBUG t => NULL
------ Statement count: 11 -----
-# DEBUG BEGIN_STMT
------ Statement count: 12 -----
-# DEBUG D#19 => D#20 * 2
------ Statement count: 13 -----
-# DEBUG D#18 => buff_10(D) + D#19
------ Statement count: 14 -----
-_1 = (void *) ivtmp.88_25;
------ Statement count: 15 -----
-# VUSE <.MEM_9(D)>
-vect__4.78_19 = MEM <vector(8) short int> [(int16_t *)_1];
------ Statement count: 16 -----
-vect__5.79_18 = [vec_unpack_lo_expr] vect__4.78_19;
------ Statement count: 17 -----
-vect__5.79_16 = [vec_unpack_hi_expr] vect__4.78_19;
------ Statement count: 18 -----
-vect_t_11.81_13 = vect_t_15.80_14 + vect__5.79_18;
------ Statement count: 19 -----
-vect_t_11.81_7 = vect_t_11.81_13 + vect__5.79_16;
------ Statement count: 20 -----
-# DEBUG D#17 => *D#18
------ Statement count: 21 -----
-# DEBUG D#16 => (int) D#17
------ Statement count: 22 -----
-# DEBUG t => D#15
------ Statement count: 23 -----
-# DEBUG BEGIN_STMT
------ Statement count: 24 -----
-# DEBUG x => NULL
------ Statement count: 25 -----
-# DEBUG t => D#15
------ Statement count: 26 -----
-# DEBUG BEGIN_STMT
------ Statement count: 27 -----
-ivtmp.88_17 = ivtmp.88_25 + 16;
------ Statement count: 28 -----
-if (_3 != ivtmp.88_17)
-===== Basic block count: 3 =====
-===== Basic block count: 4 =====
------ Statement count: 29 -----
-_27 = .REDUC_PLUS (vect_t_11.81_7);
------ Statement count: 30 -----
-_28 = t_8(D) + _27;
------ Statement count: 31 -----
-# DEBUG BEGIN_STMT
------ Statement count: 32 -----
-# VUSE <.MEM_9(D)>
-return _28;
+=== Function 1 Name '__builtin_cpu_supports' ===
+=== Function 2 Name '__builtin_cpu_init' ===
+=== Function 3 Name 'scale_samples.resolver' ===
+=== Function 4 Name 'scale_samples' ===
+=== Function 5 Name 'scale_samples.popcnt' ===
+=== Function 6 Name 'printf' ===
+=== Function 7 Name 'vol_createsample' ===
+=== Function 8 Name 'calloc' ===
+=== Function 9 Name 'main' ===
+=== Function 10 Name 'scale_samples' ===
+=== Function 11 Name 'sum_sample' ===
+
+
+#### End ctyler diagnostics, start regular dump of current gimple ####
+
+
 int sum_sample (int16_t * buff, size_t samples)
 {
   unsigned long ivtmp.88;
@@ -1644,22 +862,22 @@ int sum_sample (int16_t * buff, size_t samples)
 
 ;; Function scale_samples.resolver (scale_samples.resolver, funcdef_no=27, decl_uid=3994, cgraph_uid=32, symbol_order=31)
 
-===== Basic block count: 1 =====
------ Statement count: 1 -----
-# .MEM_2 = VDEF <.MEM_1(D)>
-__builtin_cpu_init ();
------ Statement count: 2 -----
-_3 = __builtin_cpu_supports (&"popcnt"[0]);
------ Statement count: 3 -----
-if (_3 > 0)
-===== Basic block count: 2 =====
------ Statement count: 4 -----
-# VUSE <.MEM_2>
-return scale_samples.popcnt;
-===== Basic block count: 3 =====
------ Statement count: 5 -----
-# VUSE <.MEM_2>
-return scale_samples;
+=== Function 1 Name '__builtin_cpu_supports' ===
+=== Function 2 Name '__builtin_cpu_init' ===
+=== Function 3 Name 'scale_samples.resolver' ===
+=== Function 4 Name 'scale_samples' ===
+=== Function 5 Name 'scale_samples.popcnt' ===
+=== Function 6 Name 'printf' ===
+=== Function 7 Name 'vol_createsample' ===
+=== Function 8 Name 'calloc' ===
+=== Function 9 Name 'main' ===
+=== Function 10 Name 'scale_samples' ===
+=== Function 11 Name 'sum_sample' ===
+
+
+#### End ctyler diagnostics, start regular dump of current gimple ####
+
+
 __attribute__((returns_nonnull))
 void * scale_samples.resolver ()
 {
@@ -1685,135 +903,22 @@ void * scale_samples.resolver ()
 
 ;; Function main (main, funcdef_no=24, decl_uid=3961, cgraph_uid=25, symbol_order=24) (executed once)
 
-===== Basic block count: 1 =====
------ Statement count: 1 -----
-# DEBUG BEGIN_STMT
------ Statement count: 2 -----
-# DEBUG BEGIN_STMT
------ Statement count: 3 -----
-# DEBUG ttl => 0
------ Statement count: 4 -----
-# DEBUG BEGIN_STMT
------ Statement count: 5 -----
-# DEBUG BEGIN_STMT
------ Statement count: 6 -----
-# DEBUG BEGIN_STMT
------ Statement count: 7 -----
-# .MEM_2 = VDEF <.MEM_1(D)>
-in_3 = calloc (50000000, 2);
------ Statement count: 8 -----
-# DEBUG in => in_3
------ Statement count: 9 -----
-# DEBUG BEGIN_STMT
------ Statement count: 10 -----
-# .MEM_4 = VDEF <.MEM_2>
-out_5 = calloc (50000000, 2);
------ Statement count: 11 -----
-# DEBUG out => out_5
------ Statement count: 12 -----
-# DEBUG BEGIN_STMT
------ Statement count: 13 -----
-# .MEM_6 = VDEF <.MEM_4>
-vol_createsample (in_3, 50000000);
------ Statement count: 14 -----
-# DEBUG BEGIN_STMT
------ Statement count: 15 -----
-# .MEM_7 = VDEF <.MEM_6>
-scale_samples (in_3, out_5, 50000000, 50);
------ Statement count: 16 -----
-# DEBUG BEGIN_STMT
------ Statement count: 17 -----
-# DEBUG buff => out_5
------ Statement count: 18 -----
-# DEBUG samples => 50000000
------ Statement count: 19 -----
-# DEBUG INLINE_ENTRY sum_sample
------ Statement count: 20 -----
-# DEBUG BEGIN_STMT
------ Statement count: 21 -----
-# DEBUG BEGIN_STMT
------ Statement count: 22 -----
-# DEBUG BEGIN_STMT
------ Statement count: 23 -----
-# DEBUG x => 0
------ Statement count: 24 -----
-# DEBUG t => t_18(D)
------ Statement count: 25 -----
-# DEBUG BEGIN_STMT
------ Statement count: 26 -----
-ivtmp.109_21 = (unsigned long) out_5;
------ Statement count: 27 -----
-_12 = ivtmp.109_21 + 100000000;
-===== Basic block count: 2 =====
------ Statement count: 28 -----
-# DEBUG x => NULL
------ Statement count: 29 -----
-# DEBUG t => NULL
------ Statement count: 30 -----
-# DEBUG BEGIN_STMT
------ Statement count: 31 -----
-# DEBUG D#26 => D#27 * 2
------ Statement count: 32 -----
-# DEBUG D#25 => out_5 + D#26
------ Statement count: 33 -----
-_10 = (void *) ivtmp.109_31;
------ Statement count: 34 -----
-# VUSE <.MEM_7>
-vect__13.99_25 = MEM <vector(8) short int> [(int16_t *)_10];
------ Statement count: 35 -----
-vect__14.100_24 = [vec_unpack_lo_expr] vect__13.99_25;
------ Statement count: 36 -----
-vect__14.100_23 = [vec_unpack_hi_expr] vect__13.99_25;
------ Statement count: 37 -----
-vect_t_16.102_19 = vect_t_22.101_20 + vect__14.100_24;
------ Statement count: 38 -----
-vect_t_16.102_15 = vect_t_16.102_19 + vect__14.100_23;
------ Statement count: 39 -----
-# DEBUG D#24 => *D#25
------ Statement count: 40 -----
-# DEBUG D#23 => (int) D#24
------ Statement count: 41 -----
-# DEBUG t => D#22
------ Statement count: 42 -----
-# DEBUG BEGIN_STMT
------ Statement count: 43 -----
-# DEBUG x => NULL
------ Statement count: 44 -----
-# DEBUG t => D#22
------ Statement count: 45 -----
-# DEBUG BEGIN_STMT
------ Statement count: 46 -----
-ivtmp.109_22 = ivtmp.109_31 + 16;
------ Statement count: 47 -----
-if (_12 != ivtmp.109_22)
-===== Basic block count: 3 =====
-===== Basic block count: 4 =====
------ Statement count: 48 -----
-_33 = .REDUC_PLUS (vect_t_16.102_15);
------ Statement count: 49 -----
-_34 = t_18(D) + _33;
------ Statement count: 50 -----
-# DEBUG BEGIN_STMT
------ Statement count: 51 -----
-# DEBUG buff => NULL
------ Statement count: 52 -----
-# DEBUG samples => NULL
------ Statement count: 53 -----
-# DEBUG x => NULL
------ Statement count: 54 -----
-# DEBUG t => NULL
------ Statement count: 55 -----
-# DEBUG ttl => _34
------ Statement count: 56 -----
-# DEBUG BEGIN_STMT
------ Statement count: 57 -----
-# .MEM_9 = VDEF <.MEM_7>
-printf ("Result: %d\n", _34);
------ Statement count: 58 -----
-# DEBUG BEGIN_STMT
------ Statement count: 59 -----
-# VUSE <.MEM_9>
-return 0;
+=== Function 1 Name '__builtin_cpu_supports' ===
+=== Function 2 Name '__builtin_cpu_init' ===
+=== Function 3 Name 'scale_samples.resolver' ===
+=== Function 4 Name 'scale_samples' ===
+=== Function 5 Name 'scale_samples.popcnt' ===
+=== Function 6 Name 'printf' ===
+=== Function 7 Name 'vol_createsample' ===
+=== Function 8 Name 'calloc' ===
+=== Function 9 Name 'main' ===
+=== Function 10 Name 'scale_samples' ===
+=== Function 11 Name 'sum_sample' ===
+
+
+#### End ctyler diagnostics, start regular dump of current gimple ####
+
+
 int main ()
 {
   unsigned long ivtmp.109;
