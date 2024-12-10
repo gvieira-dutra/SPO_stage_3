@@ -1,22 +1,340 @@
 
 ;; Function scale_samples (scale_samples.default, funcdef_no=23, decl_uid=3954, cgraph_uid=24, symbol_order=23)
 
-=== Function 1 Name '__builtin_cpu_supports' ===
-=== Function 2 Name '__builtin_cpu_init' ===
-=== Function 3 Name 'scale_samples.resolver' ===
-=== Function 4 Name 'scale_samples' ===
-=== Function 5 Name 'scale_samples.arch_x86_64_v3' ===
-=== Function 6 Name 'printf' ===
-=== Function 7 Name 'vol_createsample' ===
-=== Function 8 Name 'calloc' ===
-=== Function 9 Name 'main' ===
-=== Function 10 Name 'scale_samples' ===
-=== Function 11 Name 'sum_sample' ===
+=== Function Name: '__builtin_cpu_supports' ===
+=== Function Count: '0' ===
+=== Function Name: '__builtin_cpu_init' ===
+=== Function Count: '0' ===
+=== Function Name: 'scale_samples.resolver' ===
+=== Function Count: '0' ===
+# .MEM_2 = VDEF <.MEM_1(D)>
+__builtin_cpu_init ();
+_3 = __builtin_cpu_supports (&"x86-64-v3"[0]);
+if (_3 > 0)
+# VUSE <.MEM_2>
+return scale_samples.arch_x86_64_v3;
+# VUSE <.MEM_2>
+return scale_samples;
+Statement Count for Function 'scale_samples.resolver': 5
+=== Function Name: 'scale_samples' ===
+=== Function Count: '1' ===
+=== Function Name: 'scale_samples.arch_x86_64_v3' ===
+=== Function Count: '1' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG BEGIN_STMT
+_2 = (long unsigned int) x_1;
+_3 = _2 * 2;
+_5 = in_4(D) + _3;
+# VUSE <.MEM_19>
+_6 = *_5;
+_7 = (int) _6;
+_9 = volume_8(D) * 32767;
+_10 = _9 / 100;
+_11 = _10 << 1;
+_12 = _7 * _11;
+_13 = _12 >> 16;
+_15 = out_14(D) + _3;
+_16 = (short int) _13;
+# .MEM_21 = VDEF <.MEM_19>
+*_15 = _16;
+# DEBUG BEGIN_STMT
+x_17 = x_1 + 1;
+# DEBUG x => x_17
+# DEBUG x => x_1
+# DEBUG BEGIN_STMT
+if (x_1 < cnt_18(D))
+# VUSE <.MEM_19>
+return;
+Statement Count for Function 'scale_samples.arch_x86_64_v3': 24
+=== Function Name: 'printf' ===
+=== Function Count: '2' ===
+=== Function Name: 'vol_createsample' ===
+=== Function Count: '2' ===
+=== Function Name: 'calloc' ===
+=== Function Count: '2' ===
+=== Function Name: 'main' ===
+=== Function Count: '2' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG ttl => 0
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# .MEM_2 = VDEF <.MEM_1(D)>
+in_3 = calloc (50000000, 2);
+# DEBUG in => in_3
+# DEBUG BEGIN_STMT
+# .MEM_4 = VDEF <.MEM_2>
+out_5 = calloc (50000000, 2);
+# DEBUG out => out_5
+# DEBUG BEGIN_STMT
+# .MEM_6 = VDEF <.MEM_4>
+vol_createsample (in_3, 50000000);
+# DEBUG BEGIN_STMT
+# .MEM_7 = VDEF <.MEM_6>
+scale_samples (in_3, out_5, 50000000, 50);
+# DEBUG BEGIN_STMT
+# DEBUG buff => out_5
+# DEBUG samples => 50000000
+# DEBUG INLINE_ENTRY sum_sample
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG BEGIN_STMT
+_10 = (long unsigned int) x_8;
+_11 = _10 * 2;
+_12 = out_5 + _11;
+# VUSE <.MEM_7>
+_13 = *_12;
+_14 = (int) _13;
+t_16 = _14 + t_15;
+# DEBUG t => t_16
+# DEBUG BEGIN_STMT
+x_17 = x_8 + 1;
+# DEBUG x => x_17
+# DEBUG x => x_8
+# DEBUG t => t_15
+# DEBUG BEGIN_STMT
+if (x_8 != 50000000)
+# DEBUG BEGIN_STMT
+# DEBUG buff => NULL
+# DEBUG samples => NULL
+# DEBUG x => NULL
+# DEBUG t => NULL
+# DEBUG ttl => t_15
+# DEBUG BEGIN_STMT
+# .MEM_9 = VDEF <.MEM_7>
+printf ("Result: %d\n", t_15);
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_9>
+return 0;
+Statement Count for Function 'main': 48
+=== Function Name: 'scale_samples' ===
+=== Function Count: '3' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG BEGIN_STMT
+if (cnt_16(D) > 0)
+_6 = volume_18(D) * 32767;
+_7 = _6 / 100;
+_8 = _7 << 1;
+_32 = (unsigned int) cnt_16(D);
+_31 = _32 + 4294967295;
+if (_31 > 6)
+_29 = in_17(D) + 2;
+_28 = out_19(D) - _29;
+_27 = (sizetype) _28;
+if (_27 > 12)
+bnd.8_66 = _32 >> 3;
+_74 = {_8, _8, _8, _8};
+_35 = (sizetype) bnd.8_66;
+_94 = _35 * 16;
+# DEBUG x => NULL
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_25>
+vect__4.13_71 = MEM <vector(8) short int> [(int16_t *)in_17(D) + ivtmp.33_50 * 1];
+vect__5.14_72 = [vec_unpack_lo_expr] vect__4.13_71;
+vect__5.14_73 = [vec_unpack_hi_expr] vect__4.13_71;
+vect__9.15_76 = vect__5.14_72 * _74;
+vect__9.15_77 = vect__5.14_73 * _74;
+vect__10.16_78 = vect__9.15_76 >> 16;
+vect__10.16_79 = vect__9.15_77 >> 16;
+vect__12.17_80 = VEC_PACK_TRUNC_EXPR <vect__10.16_78, vect__10.16_79>;
+# .MEM_83 = VDEF <.MEM_25>
+MEM <vector(8) short int> [(int16_t *)out_19(D) + ivtmp.33_50 * 1] = vect__12.17_80;
+# DEBUG BEGIN_STMT
+# DEBUG x => NULL
+# DEBUG BEGIN_STMT
+ivtmp.33_24 = ivtmp.33_50 + 16;
+if (ivtmp.33_24 != _94)
+_52 = cnt_16(D) & -8;
+niters_vector_mult_vf.9_67 = (unsigned int) _52;
+if (_32 == niters_vector_mult_vf.9_67)
+# DEBUG x => _52
+# DEBUG BEGIN_STMT
+_2 = (long unsigned int) niters_vector_mult_vf.9_67;
+_3 = _2 * 2;
+_4 = in_17(D) + _3;
+# VUSE <.MEM_83>
+_5 = *_4;
+_9 = (int) _5;
+_10 = _8 * _9;
+_11 = _10 >> 16;
+_12 = out_19(D) + _3;
+_21 = (short int) _11;
+# .MEM_65 = VDEF <.MEM_83>
+*_12 = _21;
+# DEBUG BEGIN_STMT
+x_75 = _52 + 1;
+# DEBUG x => x_75
+# DEBUG BEGIN_STMT
+if (cnt_16(D) > x_75)
+# DEBUG x => x_75
+# DEBUG BEGIN_STMT
+_33 = _3 + 2;
+_34 = in_17(D) + _33;
+# VUSE <.MEM_65>
+_86 = *_34;
+_87 = (int) _86;
+_88 = _8 * _87;
+_89 = _88 >> 16;
+_90 = out_19(D) + _33;
+_91 = (short int) _89;
+# .MEM_92 = VDEF <.MEM_65>
+*_90 = _91;
+# DEBUG BEGIN_STMT
+x_93 = _52 + 2;
+# DEBUG x => x_93
+# DEBUG BEGIN_STMT
+if (cnt_16(D) > x_93)
+# DEBUG x => x_93
+# DEBUG BEGIN_STMT
+_97 = _3 + 4;
+_98 = in_17(D) + _97;
+# VUSE <.MEM_92>
+_99 = *_98;
+_100 = (int) _99;
+_101 = _8 * _100;
+_102 = _101 >> 16;
+_103 = out_19(D) + _97;
+_104 = (short int) _102;
+# .MEM_105 = VDEF <.MEM_92>
+*_103 = _104;
+# DEBUG BEGIN_STMT
+x_106 = _52 + 3;
+# DEBUG x => x_106
+# DEBUG BEGIN_STMT
+if (cnt_16(D) > x_106)
+# DEBUG x => x_106
+# DEBUG BEGIN_STMT
+_110 = _3 + 6;
+_111 = in_17(D) + _110;
+# VUSE <.MEM_105>
+_112 = *_111;
+_113 = (int) _112;
+_114 = _8 * _113;
+_115 = _114 >> 16;
+_116 = out_19(D) + _110;
+_117 = (short int) _115;
+# .MEM_118 = VDEF <.MEM_105>
+*_116 = _117;
+# DEBUG BEGIN_STMT
+x_119 = _52 + 4;
+# DEBUG x => x_119
+# DEBUG BEGIN_STMT
+if (cnt_16(D) > x_119)
+# DEBUG x => x_119
+# DEBUG BEGIN_STMT
+_123 = _3 + 8;
+_124 = in_17(D) + _123;
+# VUSE <.MEM_118>
+_125 = *_124;
+_126 = (int) _125;
+_127 = _8 * _126;
+_128 = _127 >> 16;
+_129 = out_19(D) + _123;
+_130 = (short int) _128;
+# .MEM_131 = VDEF <.MEM_118>
+*_129 = _130;
+# DEBUG BEGIN_STMT
+x_132 = _52 + 5;
+# DEBUG x => x_132
+# DEBUG BEGIN_STMT
+if (cnt_16(D) > x_132)
+# DEBUG x => x_132
+# DEBUG BEGIN_STMT
+_136 = _3 + 10;
+_137 = in_17(D) + _136;
+# VUSE <.MEM_131>
+_138 = *_137;
+_139 = (int) _138;
+_140 = _8 * _139;
+_141 = _140 >> 16;
+_142 = out_19(D) + _136;
+_143 = (short int) _141;
+# .MEM_144 = VDEF <.MEM_131>
+*_142 = _143;
+# DEBUG BEGIN_STMT
+x_145 = _52 + 6;
+# DEBUG x => x_145
+# DEBUG BEGIN_STMT
+if (cnt_16(D) > x_145)
+# DEBUG x => x_145
+# DEBUG BEGIN_STMT
+_54 = _3 + 12;
+_55 = in_17(D) + _54;
+# VUSE <.MEM_144>
+_56 = *_55;
+_57 = (int) _56;
+_58 = _8 * _57;
+_59 = _58 >> 16;
+_60 = out_19(D) + _54;
+_61 = (short int) _59;
+# .MEM_62 = VDEF <.MEM_144>
+*_60 = _61;
+# DEBUG BEGIN_STMT
+# DEBUG x => _52 + 7
+# DEBUG BEGIN_STMT
+_146 = (sizetype) cnt_16(D);
+_22 = _146 * 2;
+# DEBUG x => (int) (ivtmp.28_23 /[ex] 2)
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_13>
+_41 = MEM[(int16_t *)in_17(D) + ivtmp.28_23 * 1];
+_42 = (int) _41;
+_43 = _8 * _42;
+_44 = _43 >> 16;
+_46 = (short int) _44;
+# .MEM_47 = VDEF <.MEM_13>
+MEM[(int16_t *)out_19(D) + ivtmp.28_23 * 1] = _46;
+# DEBUG BEGIN_STMT
+# DEBUG x => (int) (ivtmp.28_23 /[ex] 2) + 1
+# DEBUG BEGIN_STMT
+ivtmp.28_63 = ivtmp.28_23 + 2;
+if (_22 != ivtmp.28_63)
+# VUSE <.MEM_37>
+return;
+Statement Count for Function 'scale_samples': 165
+=== Function Name: 'sum_sample' ===
+=== Function Count: '4' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG BEGIN_STMT
+_1 = (long unsigned int) x_7;
+_2 = _1 * 2;
+_3 = buff_10(D) + _2;
+# VUSE <.MEM_9(D)>
+_4 = *_3;
+_5 = (int) _4;
+t_11 = _5 + t_6;
+# DEBUG t => t_11
+# DEBUG BEGIN_STMT
+x_12 = x_7 + 1;
+# DEBUG x => x_12
+# DEBUG x => x_7
+# DEBUG t => t_6
+# DEBUG BEGIN_STMT
+if (x_7 != 50000000)
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_9(D)>
+return t_6;
+Statement Count for Function 'sum_sample': 21
 
 
-#### End ctyler diagnostics, start regular dump of current gimple ####
+##### End ctyler diagnostics, start regular dump of current gimple #####
 
 
+Function 1: 5 statements
+Function 2: 24 statements
+Function 3: 48 statements
+Function 4: 165 statements
+Function 5: 21 statements
 __attribute__((target ("default"), target_clones ("default", "arch=x86-64-v3")))
 void scale_samples (int16_t * in, int16_t * out, int cnt, int volume)
 {
@@ -391,22 +709,341 @@ void scale_samples (int16_t * in, int16_t * out, int cnt, int volume)
 
 ;; Function scale_samples.arch_x86_64_v3 (scale_samples.arch_x86_64_v3, funcdef_no=25, decl_uid=3985, cgraph_uid=30, symbol_order=29)
 
-=== Function 1 Name '__builtin_cpu_supports' ===
-=== Function 2 Name '__builtin_cpu_init' ===
-=== Function 3 Name 'scale_samples.resolver' ===
-=== Function 4 Name 'scale_samples' ===
-=== Function 5 Name 'scale_samples.arch_x86_64_v3' ===
-=== Function 6 Name 'printf' ===
-=== Function 7 Name 'vol_createsample' ===
-=== Function 8 Name 'calloc' ===
-=== Function 9 Name 'main' ===
-=== Function 10 Name 'scale_samples' ===
-=== Function 11 Name 'sum_sample' ===
+=== Function Name: '__builtin_cpu_supports' ===
+=== Function Count: '0' ===
+=== Function Name: '__builtin_cpu_init' ===
+=== Function Count: '0' ===
+=== Function Name: 'scale_samples.resolver' ===
+=== Function Count: '0' ===
+# .MEM_2 = VDEF <.MEM_1(D)>
+__builtin_cpu_init ();
+_3 = __builtin_cpu_supports (&"x86-64-v3"[0]);
+if (_3 > 0)
+# VUSE <.MEM_2>
+return scale_samples.arch_x86_64_v3;
+# VUSE <.MEM_2>
+return scale_samples;
+Statement Count for Function 'scale_samples.resolver': 5
+=== Function Name: 'scale_samples' ===
+=== Function Count: '1' ===
+=== Function Name: 'scale_samples.arch_x86_64_v3' ===
+=== Function Count: '1' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG BEGIN_STMT
+if (cnt_18(D) > 0)
+_9 = volume_8(D) * 32767;
+_10 = _9 / 100;
+_11 = _10 << 1;
+_30 = (unsigned int) cnt_18(D);
+_29 = _30 + 4294967295;
+if (_29 > 6)
+_27 = in_4(D) + 2;
+_23 = out_14(D) - _27;
+_22 = (sizetype) _23;
+if (_22 > 28)
+if (_29 <= 14)
+bnd.43_72 = _30 >> 4;
+_82 = {_11, _11, _11, _11, _11, _11, _11, _11};
+_195 = (sizetype) bnd.43_72;
+_194 = _195 * 32;
+# DEBUG x => NULL
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_25>
+vect__6.48_79 = MEM <vector(16) short int> [(int16_t *)in_4(D) + ivtmp.81_197 * 1];
+vect__7.49_80 = [vec_unpack_lo_expr] vect__6.48_79;
+vect__7.49_81 = [vec_unpack_hi_expr] vect__6.48_79;
+vect__12.50_84 = vect__7.49_80 * _82;
+vect__12.50_85 = vect__7.49_81 * _82;
+vect__13.51_86 = vect__12.50_84 >> 16;
+vect__13.51_87 = vect__12.50_85 >> 16;
+vect__16.52_88 = VEC_PACK_TRUNC_EXPR <vect__13.51_86, vect__13.51_87>;
+# .MEM_91 = VDEF <.MEM_25>
+MEM <vector(16) short int> [(int16_t *)out_14(D) + ivtmp.81_197 * 1] = vect__16.52_88;
+# DEBUG BEGIN_STMT
+# DEBUG x => NULL
+# DEBUG BEGIN_STMT
+ivtmp.81_196 = ivtmp.81_197 + 32;
+if (_194 != ivtmp.81_196)
+_162 = cnt_18(D) & -16;
+niters_vector_mult_vf.44_73 = (unsigned int) _162;
+if (_30 == niters_vector_mult_vf.44_73)
+niters.55_95 = _30 - niters_vector_mult_vf.44_73;
+_114 = niters.55_95 + 4294967295;
+if (_114 <= 6)
+_122 = (sizetype) _38;
+_123 = _122 * 2;
+vectp_in.60_121 = in_4(D) + _123;
+_129 = {_11, _11, _11, _11};
+vectp_out.67_136 = out_14(D) + _123;
+# DEBUG x => NULL
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_66>
+vect__58.61_126 = MEM <vector(8) short int> [(int16_t *)vectp_in.60_121];
+vect__59.62_127 = [vec_unpack_lo_expr] vect__58.61_126;
+vect__59.62_128 = [vec_unpack_hi_expr] vect__58.61_126;
+vect__60.63_131 = vect__59.62_127 * _129;
+vect__60.63_132 = vect__59.62_128 * _129;
+vect__61.64_133 = vect__60.63_131 >> 16;
+vect__61.64_134 = vect__60.63_132 >> 16;
+vect__63.65_135 = VEC_PACK_TRUNC_EXPR <vect__61.64_133, vect__61.64_134>;
+# .MEM_141 = VDEF <.MEM_66>
+MEM <vector(8) short int> [(int16_t *)vectp_out.67_136] = vect__63.65_135;
+# DEBUG BEGIN_STMT
+# DEBUG x => NULL
+# DEBUG BEGIN_STMT
+_98 = niters.55_40 & 7;
+if (_98 == 0)
+niters_vector_mult_vf.57_118 = niters.55_40 & 4294967288;
+_120 = (int) niters_vector_mult_vf.57_118;
+tmp.58_119 = x_32 + _120;
+# DEBUG x => x_115
+# DEBUG BEGIN_STMT
+_3 = (long unsigned int) x_115;
+_5 = _3 * 2;
+_6 = in_4(D) + _5;
+# VUSE <.MEM_116>
+_7 = *_6;
+_12 = (int) _7;
+_13 = _11 * _12;
+_15 = _13 >> 16;
+_16 = out_14(D) + _5;
+_17 = (short int) _15;
+# .MEM_53 = VDEF <.MEM_116>
+*_16 = _17;
+# DEBUG BEGIN_STMT
+x_55 = x_115 + 1;
+# DEBUG x => x_55
+# DEBUG BEGIN_STMT
+if (cnt_18(D) > x_55)
+# DEBUG x => x_55
+# DEBUG BEGIN_STMT
+_59 = _5 + 2;
+_60 = in_4(D) + _59;
+# VUSE <.MEM_53>
+_61 = *_60;
+_62 = (int) _61;
+_63 = _11 * _62;
+_65 = _63 >> 16;
+_67 = out_14(D) + _59;
+_111 = (short int) _65;
+# .MEM_130 = VDEF <.MEM_53>
+*_67 = _111;
+# DEBUG BEGIN_STMT
+x_137 = x_115 + 2;
+# DEBUG x => x_137
+# DEBUG BEGIN_STMT
+if (cnt_18(D) > x_137)
+# DEBUG x => x_137
+# DEBUG BEGIN_STMT
+_83 = _5 + 4;
+_35 = in_4(D) + _83;
+# VUSE <.MEM_130>
+_36 = *_35;
+_64 = (int) _36;
+_21 = _11 * _64;
+_33 = _21 >> 16;
+_34 = out_14(D) + _83;
+_144 = (short int) _33;
+# .MEM_145 = VDEF <.MEM_130>
+*_34 = _144;
+# DEBUG BEGIN_STMT
+x_146 = x_115 + 3;
+# DEBUG x => x_146
+# DEBUG BEGIN_STMT
+if (cnt_18(D) > x_146)
+# DEBUG x => x_146
+# DEBUG BEGIN_STMT
+_150 = _5 + 6;
+_151 = in_4(D) + _150;
+# VUSE <.MEM_145>
+_152 = *_151;
+_153 = (int) _152;
+_154 = _11 * _153;
+_155 = _154 >> 16;
+_156 = out_14(D) + _150;
+_157 = (short int) _155;
+# .MEM_158 = VDEF <.MEM_145>
+*_156 = _157;
+# DEBUG BEGIN_STMT
+x_159 = x_115 + 4;
+# DEBUG x => x_159
+# DEBUG BEGIN_STMT
+if (cnt_18(D) > x_159)
+# DEBUG x => x_159
+# DEBUG BEGIN_STMT
+_163 = _5 + 8;
+_164 = in_4(D) + _163;
+# VUSE <.MEM_158>
+_165 = *_164;
+_166 = (int) _165;
+_167 = _11 * _166;
+_168 = _167 >> 16;
+_169 = out_14(D) + _163;
+_170 = (short int) _168;
+# .MEM_171 = VDEF <.MEM_158>
+*_169 = _170;
+# DEBUG BEGIN_STMT
+x_172 = x_115 + 5;
+# DEBUG x => x_172
+# DEBUG BEGIN_STMT
+if (cnt_18(D) > x_172)
+# DEBUG x => x_172
+# DEBUG BEGIN_STMT
+_176 = _5 + 10;
+_177 = in_4(D) + _176;
+# VUSE <.MEM_171>
+_178 = *_177;
+_179 = (int) _178;
+_180 = _11 * _179;
+_181 = _180 >> 16;
+_182 = out_14(D) + _176;
+_183 = (short int) _181;
+# .MEM_184 = VDEF <.MEM_171>
+*_182 = _183;
+# DEBUG BEGIN_STMT
+x_185 = x_115 + 6;
+# DEBUG x => x_185
+# DEBUG BEGIN_STMT
+if (cnt_18(D) > x_185)
+# DEBUG x => x_185
+# DEBUG BEGIN_STMT
+_100 = _5 + 12;
+_101 = in_4(D) + _100;
+# VUSE <.MEM_184>
+_102 = *_101;
+_103 = (int) _102;
+_104 = _11 * _103;
+_105 = _104 >> 16;
+_106 = out_14(D) + _100;
+_107 = (short int) _105;
+# .MEM_108 = VDEF <.MEM_184>
+*_106 = _107;
+# DEBUG BEGIN_STMT
+# DEBUG x => x_115 + 7
+# DEBUG BEGIN_STMT
+_199 = (sizetype) cnt_18(D);
+_198 = _199 * 2;
+# DEBUG x => (int) (ivtmp.77_201 /[ex] 2)
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_39>
+_43 = MEM[(int16_t *)in_4(D) + ivtmp.77_201 * 1];
+_44 = (int) _43;
+_45 = _11 * _44;
+_46 = _45 >> 16;
+_48 = (short int) _46;
+# .MEM_49 = VDEF <.MEM_39>
+MEM[(int16_t *)out_14(D) + ivtmp.77_201 * 1] = _48;
+# DEBUG BEGIN_STMT
+# DEBUG x => (int) (ivtmp.77_201 /[ex] 2) + 1
+# DEBUG BEGIN_STMT
+ivtmp.77_200 = ivtmp.77_201 + 2;
+if (_198 != ivtmp.77_200)
+# VUSE <.MEM_37>
+return;
+Statement Count for Function 'scale_samples.arch_x86_64_v3': 193
+=== Function Name: 'printf' ===
+=== Function Count: '2' ===
+=== Function Name: 'vol_createsample' ===
+=== Function Count: '2' ===
+=== Function Name: 'calloc' ===
+=== Function Count: '2' ===
+=== Function Name: 'main' ===
+=== Function Count: '2' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG ttl => 0
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# .MEM_2 = VDEF <.MEM_1(D)>
+in_3 = calloc (50000000, 2);
+# DEBUG in => in_3
+# DEBUG BEGIN_STMT
+# .MEM_4 = VDEF <.MEM_2>
+out_5 = calloc (50000000, 2);
+# DEBUG out => out_5
+# DEBUG BEGIN_STMT
+# .MEM_6 = VDEF <.MEM_4>
+vol_createsample (in_3, 50000000);
+# DEBUG BEGIN_STMT
+# .MEM_7 = VDEF <.MEM_6>
+scale_samples (in_3, out_5, 50000000, 50);
+# DEBUG BEGIN_STMT
+# DEBUG buff => out_5
+# DEBUG samples => 50000000
+# DEBUG INLINE_ENTRY sum_sample
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG BEGIN_STMT
+_10 = (long unsigned int) x_8;
+_11 = _10 * 2;
+_12 = out_5 + _11;
+# VUSE <.MEM_7>
+_13 = *_12;
+_14 = (int) _13;
+t_16 = _14 + t_15;
+# DEBUG t => t_16
+# DEBUG BEGIN_STMT
+x_17 = x_8 + 1;
+# DEBUG x => x_17
+# DEBUG x => x_8
+# DEBUG t => t_15
+# DEBUG BEGIN_STMT
+if (x_8 != 50000000)
+# DEBUG BEGIN_STMT
+# DEBUG buff => NULL
+# DEBUG samples => NULL
+# DEBUG x => NULL
+# DEBUG t => NULL
+# DEBUG ttl => t_15
+# DEBUG BEGIN_STMT
+# .MEM_9 = VDEF <.MEM_7>
+printf ("Result: %d\n", t_15);
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_9>
+return 0;
+Statement Count for Function 'main': 48
+=== Function Name: 'scale_samples' ===
+=== Function Count: '3' ===
+=== Function Name: 'sum_sample' ===
+=== Function Count: '3' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG BEGIN_STMT
+_1 = (long unsigned int) x_7;
+_2 = _1 * 2;
+_3 = buff_10(D) + _2;
+# VUSE <.MEM_9(D)>
+_4 = *_3;
+_5 = (int) _4;
+t_11 = _5 + t_6;
+# DEBUG t => t_11
+# DEBUG BEGIN_STMT
+x_12 = x_7 + 1;
+# DEBUG x => x_12
+# DEBUG x => x_7
+# DEBUG t => t_6
+# DEBUG BEGIN_STMT
+if (x_7 != 50000000)
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_9(D)>
+return t_6;
+Statement Count for Function 'sum_sample': 21
 
 
-#### End ctyler diagnostics, start regular dump of current gimple ####
+##### End ctyler diagnostics, start regular dump of current gimple #####
 
 
+Function 1: 5 statements
+Function 2: 193 statements
+Function 3: 48 statements
+Function 4: 21 statements
 __attribute__((target ("arch=x86-64-v3"), target_clones ("default", "arch=x86-64-v3")))
 void scale_samples.arch_x86_64_v3 (int16_t * in, int16_t * out, int cnt, int volume)
 {
@@ -860,22 +1497,136 @@ void scale_samples.arch_x86_64_v3 (int16_t * in, int16_t * out, int cnt, int vol
 
 ;; Function sum_sample (sum_sample, funcdef_no=22, decl_uid=3942, cgraph_uid=23, symbol_order=22)
 
-=== Function 1 Name '__builtin_cpu_supports' ===
-=== Function 2 Name '__builtin_cpu_init' ===
-=== Function 3 Name 'scale_samples.resolver' ===
-=== Function 4 Name 'scale_samples' ===
-=== Function 5 Name 'scale_samples.arch_x86_64_v3' ===
-=== Function 6 Name 'printf' ===
-=== Function 7 Name 'vol_createsample' ===
-=== Function 8 Name 'calloc' ===
-=== Function 9 Name 'main' ===
-=== Function 10 Name 'scale_samples' ===
-=== Function 11 Name 'sum_sample' ===
+=== Function Name: '__builtin_cpu_supports' ===
+=== Function Count: '0' ===
+=== Function Name: '__builtin_cpu_init' ===
+=== Function Count: '0' ===
+=== Function Name: 'scale_samples.resolver' ===
+=== Function Count: '0' ===
+# .MEM_2 = VDEF <.MEM_1(D)>
+__builtin_cpu_init ();
+_3 = __builtin_cpu_supports (&"x86-64-v3"[0]);
+if (_3 > 0)
+# VUSE <.MEM_2>
+return scale_samples.arch_x86_64_v3;
+# VUSE <.MEM_2>
+return scale_samples;
+Statement Count for Function 'scale_samples.resolver': 5
+=== Function Name: 'scale_samples' ===
+=== Function Count: '1' ===
+=== Function Name: 'scale_samples.arch_x86_64_v3' ===
+=== Function Count: '1' ===
+=== Function Name: 'printf' ===
+=== Function Count: '1' ===
+=== Function Name: 'vol_createsample' ===
+=== Function Count: '1' ===
+=== Function Name: 'calloc' ===
+=== Function Count: '1' ===
+=== Function Name: 'main' ===
+=== Function Count: '1' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG ttl => 0
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# .MEM_2 = VDEF <.MEM_1(D)>
+in_3 = calloc (50000000, 2);
+# DEBUG in => in_3
+# DEBUG BEGIN_STMT
+# .MEM_4 = VDEF <.MEM_2>
+out_5 = calloc (50000000, 2);
+# DEBUG out => out_5
+# DEBUG BEGIN_STMT
+# .MEM_6 = VDEF <.MEM_4>
+vol_createsample (in_3, 50000000);
+# DEBUG BEGIN_STMT
+# .MEM_7 = VDEF <.MEM_6>
+scale_samples (in_3, out_5, 50000000, 50);
+# DEBUG BEGIN_STMT
+# DEBUG buff => out_5
+# DEBUG samples => 50000000
+# DEBUG INLINE_ENTRY sum_sample
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG BEGIN_STMT
+_10 = (long unsigned int) x_8;
+_11 = _10 * 2;
+_12 = out_5 + _11;
+# VUSE <.MEM_7>
+_13 = *_12;
+_14 = (int) _13;
+t_16 = _14 + t_15;
+# DEBUG t => t_16
+# DEBUG BEGIN_STMT
+x_17 = x_8 + 1;
+# DEBUG x => x_17
+# DEBUG x => x_8
+# DEBUG t => t_15
+# DEBUG BEGIN_STMT
+if (x_8 != 50000000)
+# DEBUG BEGIN_STMT
+# DEBUG buff => NULL
+# DEBUG samples => NULL
+# DEBUG x => NULL
+# DEBUG t => NULL
+# DEBUG ttl => t_15
+# DEBUG BEGIN_STMT
+# .MEM_9 = VDEF <.MEM_7>
+printf ("Result: %d\n", t_15);
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_9>
+return 0;
+Statement Count for Function 'main': 48
+=== Function Name: 'scale_samples' ===
+=== Function Count: '2' ===
+=== Function Name: 'sum_sample' ===
+=== Function Count: '2' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG t => t_8(D)
+# DEBUG BEGIN_STMT
+ivtmp.102_15 = (unsigned long) buff_10(D);
+_3 = ivtmp.102_15 + 100000000;
+# DEBUG x => NULL
+# DEBUG t => NULL
+# DEBUG BEGIN_STMT
+# DEBUG D#19 => D#20 * 2
+# DEBUG D#18 => buff_10(D) + D#19
+_1 = (void *) ivtmp.102_25;
+# VUSE <.MEM_9(D)>
+vect__4.92_19 = MEM <vector(8) short int> [(int16_t *)_1];
+vect__5.93_18 = [vec_unpack_lo_expr] vect__4.92_19;
+vect__5.93_16 = [vec_unpack_hi_expr] vect__4.92_19;
+vect_t_11.95_13 = vect_t_15.94_14 + vect__5.93_18;
+vect_t_11.95_7 = vect_t_11.95_13 + vect__5.93_16;
+# DEBUG D#17 => *D#18
+# DEBUG D#16 => (int) D#17
+# DEBUG t => D#15
+# DEBUG BEGIN_STMT
+# DEBUG x => NULL
+# DEBUG t => D#15
+# DEBUG BEGIN_STMT
+ivtmp.102_17 = ivtmp.102_25 + 16;
+if (_3 != ivtmp.102_17)
+_27 = .REDUC_PLUS (vect_t_11.95_7);
+_28 = t_8(D) + _27;
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_9(D)>
+return _28;
+Statement Count for Function 'sum_sample': 32
 
 
-#### End ctyler diagnostics, start regular dump of current gimple ####
+##### End ctyler diagnostics, start regular dump of current gimple #####
 
 
+Function 1: 5 statements
+Function 2: 48 statements
+Function 3: 32 statements
 int sum_sample (int16_t * buff, size_t samples)
 {
   unsigned long ivtmp.102;
@@ -941,22 +1692,100 @@ int sum_sample (int16_t * buff, size_t samples)
 
 ;; Function scale_samples.resolver (scale_samples.resolver, funcdef_no=27, decl_uid=4477, cgraph_uid=32, symbol_order=31)
 
-=== Function 1 Name '__builtin_cpu_supports' ===
-=== Function 2 Name '__builtin_cpu_init' ===
-=== Function 3 Name 'scale_samples.resolver' ===
-=== Function 4 Name 'scale_samples' ===
-=== Function 5 Name 'scale_samples.arch_x86_64_v3' ===
-=== Function 6 Name 'printf' ===
-=== Function 7 Name 'vol_createsample' ===
-=== Function 8 Name 'calloc' ===
-=== Function 9 Name 'main' ===
-=== Function 10 Name 'scale_samples' ===
-=== Function 11 Name 'sum_sample' ===
+=== Function Name: '__builtin_cpu_supports' ===
+=== Function Count: '0' ===
+=== Function Name: '__builtin_cpu_init' ===
+=== Function Count: '0' ===
+=== Function Name: 'scale_samples.resolver' ===
+=== Function Count: '0' ===
+# .MEM_2 = VDEF <.MEM_1(D)>
+__builtin_cpu_init ();
+_3 = __builtin_cpu_supports (&"x86-64-v3"[0]);
+if (_3 > 0)
+# VUSE <.MEM_2>
+return scale_samples.arch_x86_64_v3;
+# VUSE <.MEM_2>
+return scale_samples;
+Statement Count for Function 'scale_samples.resolver': 5
+=== Function Name: 'scale_samples' ===
+=== Function Count: '1' ===
+=== Function Name: 'scale_samples.arch_x86_64_v3' ===
+=== Function Count: '1' ===
+=== Function Name: 'printf' ===
+=== Function Count: '1' ===
+=== Function Name: 'vol_createsample' ===
+=== Function Count: '1' ===
+=== Function Name: 'calloc' ===
+=== Function Count: '1' ===
+=== Function Name: 'main' ===
+=== Function Count: '1' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG ttl => 0
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# .MEM_2 = VDEF <.MEM_1(D)>
+in_3 = calloc (50000000, 2);
+# DEBUG in => in_3
+# DEBUG BEGIN_STMT
+# .MEM_4 = VDEF <.MEM_2>
+out_5 = calloc (50000000, 2);
+# DEBUG out => out_5
+# DEBUG BEGIN_STMT
+# .MEM_6 = VDEF <.MEM_4>
+vol_createsample (in_3, 50000000);
+# DEBUG BEGIN_STMT
+# .MEM_7 = VDEF <.MEM_6>
+scale_samples (in_3, out_5, 50000000, 50);
+# DEBUG BEGIN_STMT
+# DEBUG buff => out_5
+# DEBUG samples => 50000000
+# DEBUG INLINE_ENTRY sum_sample
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG BEGIN_STMT
+_10 = (long unsigned int) x_8;
+_11 = _10 * 2;
+_12 = out_5 + _11;
+# VUSE <.MEM_7>
+_13 = *_12;
+_14 = (int) _13;
+t_16 = _14 + t_15;
+# DEBUG t => t_16
+# DEBUG BEGIN_STMT
+x_17 = x_8 + 1;
+# DEBUG x => x_17
+# DEBUG x => x_8
+# DEBUG t => t_15
+# DEBUG BEGIN_STMT
+if (x_8 != 50000000)
+# DEBUG BEGIN_STMT
+# DEBUG buff => NULL
+# DEBUG samples => NULL
+# DEBUG x => NULL
+# DEBUG t => NULL
+# DEBUG ttl => t_15
+# DEBUG BEGIN_STMT
+# .MEM_9 = VDEF <.MEM_7>
+printf ("Result: %d\n", t_15);
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_9>
+return 0;
+Statement Count for Function 'main': 48
+=== Function Name: 'scale_samples' ===
+=== Function Count: '2' ===
+=== Function Name: 'sum_sample' ===
+=== Function Count: '2' ===
 
 
-#### End ctyler diagnostics, start regular dump of current gimple ####
+##### End ctyler diagnostics, start regular dump of current gimple #####
 
 
+Function 1: 5 statements
+Function 2: 48 statements
 __attribute__((returns_nonnull))
 void * scale_samples.resolver ()
 {
@@ -982,22 +1811,101 @@ void * scale_samples.resolver ()
 
 ;; Function main (main, funcdef_no=24, decl_uid=3961, cgraph_uid=25, symbol_order=24) (executed once)
 
-=== Function 1 Name '__builtin_cpu_supports' ===
-=== Function 2 Name '__builtin_cpu_init' ===
-=== Function 3 Name 'scale_samples.resolver' ===
-=== Function 4 Name 'scale_samples' ===
-=== Function 5 Name 'scale_samples.arch_x86_64_v3' ===
-=== Function 6 Name 'printf' ===
-=== Function 7 Name 'vol_createsample' ===
-=== Function 8 Name 'calloc' ===
-=== Function 9 Name 'main' ===
-=== Function 10 Name 'scale_samples' ===
-=== Function 11 Name 'sum_sample' ===
+=== Function Name: '__builtin_cpu_supports' ===
+=== Function Count: '0' ===
+=== Function Name: '__builtin_cpu_init' ===
+=== Function Count: '0' ===
+=== Function Name: 'scale_samples.resolver' ===
+=== Function Count: '0' ===
+=== Function Name: 'scale_samples' ===
+=== Function Count: '0' ===
+=== Function Name: 'scale_samples.arch_x86_64_v3' ===
+=== Function Count: '0' ===
+=== Function Name: 'printf' ===
+=== Function Count: '0' ===
+=== Function Name: 'vol_createsample' ===
+=== Function Count: '0' ===
+=== Function Name: 'calloc' ===
+=== Function Count: '0' ===
+=== Function Name: 'main' ===
+=== Function Count: '0' ===
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG ttl => 0
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# .MEM_2 = VDEF <.MEM_1(D)>
+in_3 = calloc (50000000, 2);
+# DEBUG in => in_3
+# DEBUG BEGIN_STMT
+# .MEM_4 = VDEF <.MEM_2>
+out_5 = calloc (50000000, 2);
+# DEBUG out => out_5
+# DEBUG BEGIN_STMT
+# .MEM_6 = VDEF <.MEM_4>
+vol_createsample (in_3, 50000000);
+# DEBUG BEGIN_STMT
+# .MEM_7 = VDEF <.MEM_6>
+scale_samples (in_3, out_5, 50000000, 50);
+# DEBUG BEGIN_STMT
+# DEBUG buff => out_5
+# DEBUG samples => 50000000
+# DEBUG INLINE_ENTRY sum_sample
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG BEGIN_STMT
+# DEBUG x => 0
+# DEBUG t => t_18(D)
+# DEBUG BEGIN_STMT
+ivtmp.123_21 = (unsigned long) out_5;
+_12 = ivtmp.123_21 + 100000000;
+# DEBUG x => NULL
+# DEBUG t => NULL
+# DEBUG BEGIN_STMT
+# DEBUG D#26 => D#27 * 2
+# DEBUG D#25 => out_5 + D#26
+_10 = (void *) ivtmp.123_31;
+# VUSE <.MEM_7>
+vect__13.113_25 = MEM <vector(8) short int> [(int16_t *)_10];
+vect__14.114_24 = [vec_unpack_lo_expr] vect__13.113_25;
+vect__14.114_23 = [vec_unpack_hi_expr] vect__13.113_25;
+vect_t_16.116_19 = vect_t_22.115_20 + vect__14.114_24;
+vect_t_16.116_15 = vect_t_16.116_19 + vect__14.114_23;
+# DEBUG D#24 => *D#25
+# DEBUG D#23 => (int) D#24
+# DEBUG t => D#22
+# DEBUG BEGIN_STMT
+# DEBUG x => NULL
+# DEBUG t => D#22
+# DEBUG BEGIN_STMT
+ivtmp.123_22 = ivtmp.123_31 + 16;
+if (_12 != ivtmp.123_22)
+_33 = .REDUC_PLUS (vect_t_16.116_15);
+_34 = t_18(D) + _33;
+# DEBUG BEGIN_STMT
+# DEBUG buff => NULL
+# DEBUG samples => NULL
+# DEBUG x => NULL
+# DEBUG t => NULL
+# DEBUG ttl => _34
+# DEBUG BEGIN_STMT
+# .MEM_9 = VDEF <.MEM_7>
+printf ("Result: %d\n", _34);
+# DEBUG BEGIN_STMT
+# VUSE <.MEM_9>
+return 0;
+Statement Count for Function 'main': 59
+=== Function Name: 'scale_samples' ===
+=== Function Count: '1' ===
+=== Function Name: 'sum_sample' ===
+=== Function Count: '1' ===
 
 
-#### End ctyler diagnostics, start regular dump of current gimple ####
+##### End ctyler diagnostics, start regular dump of current gimple #####
 
 
+Function 1: 59 statements
 int main ()
 {
   unsigned long ivtmp.123;
