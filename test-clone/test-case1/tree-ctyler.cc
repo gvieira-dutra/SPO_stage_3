@@ -37,7 +37,6 @@ along with GCC; see the file COPYING3.  If not see
 #include "diagnostic.h"
 #include "dumpfile.h"
 #include "builtins.h"
-#include "cp-tree.h"
 //#include <stdlib.h>
 
 // ============================================================= vvv
@@ -75,23 +74,24 @@ public:
 
 }; // class pass_ctyler
 
-   
-unsigned int
-pass_ctyler::execute (function *fun)
+unsigned int 
+pass_ctyler::execute(function *fun)
 {
     if (!fun || !fun->decl)
     {
-        fprintf(dump_file, "Invalid function object.\n");
+        fprintf(dump_file, "Invalid function!!!!!!!.\n");
         return 0;
     }
 
     const char *func_name = IDENTIFIER_POINTER(DECL_NAME(fun->decl));
-    if (DECL_CLONED_FUNCTION_P(fun->decl))
+
+    // Use DECL_STRUCT_FUNCTION to search for cloned functions
+    if (DECL_STRUCT_FUNCTION(fun->decl))
     {
-        fprintf(dump_file, "Function %s is a clone.\n", func_name);
+        fprintf(dump_file, "function %s is a clone function.\n", func_name);
     }
 
-    // Analyze the basic blocks within the function
+    // Analyzing basic blocks within
     basic_block bb;
     int bb_cnt = 0;
     FOR_EACH_BB_FN(bb, fun)
@@ -99,7 +99,7 @@ pass_ctyler::execute (function *fun)
         bb_cnt++;
         fprintf(dump_file, "Analyzing basic block %d in function %s.\n", bb_cnt, func_name);
 
-        // Analyze statements within each basic block if needed
+        // Analyzing statements insiide each basic block 
         for (gimple_stmt_iterator gsi = gsi_start_bb(bb); !gsi_end_p(gsi); gsi_next(&gsi))
         {
             gimple *g = gsi_stmt(gsi);
@@ -114,6 +114,9 @@ pass_ctyler::execute (function *fun)
 
     return 0;
 }
+
+
+
 
 } //anon namespace
 	
