@@ -1,4 +1,4 @@
-#Makefile for clone tests, based on volume scaling demo
+# Makefile for clone tests, based on volume scaling demo
 # Chris Tyler 2017.11.29-2024.11.19 - Licensed under GPLv3.
 # For the Seneca College SPO600 Course
 
