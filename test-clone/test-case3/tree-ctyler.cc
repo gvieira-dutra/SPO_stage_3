@@ -44,6 +44,12 @@ along with GCC; see the file COPYING3.  If not see
 #include "pretty-print.h"
 #include "tree-inline.h"
 #include "intl.h"
+
+// Data type includes
+#include <map>
+#include <vector>
+#include <string>
+#include <iostream>
 // ============================================================= vvv
 // Test pass
 
@@ -84,6 +90,7 @@ unsigned int pass_ctyler::execute(function *)
     struct cgraph_node *node;
     int func_cnt = 0;
     int *stmt_counts = (int *)xmalloc(30 * sizeof(int));  
+    std::map<std::string, std::vector<std::string>> function_gimple_map;
 
     FOR_EACH_FUNCTION(node)
     {
@@ -100,6 +107,7 @@ unsigned int pass_ctyler::execute(function *)
                 function *fn = node->get_fun();
                 if (fn)
                 {
+			std::vector<std::string> this_func_gimple_statements;
                     basic_block bb;
                     
                     // Iterate over bb in the function
@@ -111,10 +119,15 @@ unsigned int pass_ctyler::execute(function *)
                             gimple *g = gsi_stmt(gsi);  
                             stmt_cnt++; 
 
-                            print_gimple_stmt("GIMPLE STATEMENT", dump_file, g, 0, TDF_VOPS | TDF_MEMSYMS);
-                        }
+//                            print_gimple_stmt(dump_file, g, 0, TDF_VOPS | TDF_MEMSYMS);
+  				char *gimple_block = g;
+				this_func_gimple_statements.push_back(gimple_block);
+
+  			}
                     }
 
+		    function_gimple_map[node->name()] = gimple_block;
+		    
                     //Storing statemnt count 
                     stmt_counts[func_cnt] = stmt_cnt;
                     fprintf(dump_file, "Statement Count for Function '%s': %d\n", node->name(), stmt_cnt);
